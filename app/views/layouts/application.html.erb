@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Compass Auto Inc.</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag asset_path("compassLogoKey.png") %>
+  </head>
+
+  <body>
+  <div class="nav">
+    <ul>
+      <li>
+        <%= link_to image_tag("compassLogo.png", style: 'height:30px;width:auto;'), root_path, class:"logo"%>
+      </li>
+      <li>
+        <%= link_to 'Sales', user_session_path, :class => current_class?(user_session_path)%>
+      </li>
+      <li>
+        <%= link_to 'Inventory', user_session_path, :class => current_class?(user_session_path)%>
+      </li>
+      <li>
+        <%= link_to 'Customers', user_session_path, :class => current_class?(user_session_path)%>
+      </li>
+          <% if user_signed_in? %>
+        <li>
+          <%= link_to '<i class="fa fa-user-circle" style="font-size:25px; vertical-align: middle;"></i>'.html_safe, destroy_user_session_path, method: :delete, class:"user_icon"%>        </li>
+        </li>
+      <% else %>
+        <li>
+          <%= link_to '<i class="fa fa-user-circle" style="font-size:25px; vertical-align: middle;"></i>'.html_safe, user_session_path, class:"user_icon"%>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <% if notice %>
+    <p class="alert alert-success"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+    <p class="alert alert-danger"><%= alert %></p>
+  <% end %>
+
+
+
+
+
+  <%= yield %>
+  </body>
+</html>
