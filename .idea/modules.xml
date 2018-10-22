@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ProjectPractice.iml" filepath="$PROJECT_DIR$/ProjectPractice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CompassAuto.iml" filepath="$PROJECT_DIR$/CompassAuto.iml" />
     </modules>
   </component>
 </project>
