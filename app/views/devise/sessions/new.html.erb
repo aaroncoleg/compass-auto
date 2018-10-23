@@ -14,7 +14,6 @@
         });
     })
 </script>
-<%= devise_error_messages!%>
 
 <div class="wrapper">
 
@@ -43,7 +42,11 @@
     <%= form_for(:user, :url => registration_path(:user)) do |f| %>
 
       <div class="field">
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", :required =>true, :type =>"text", :placeholder =>"Email"%>
+        <%= f.text_field :first_name, autofocus: true, :required =>true, :type =>"text", :placeholder =>"First Name"%>
+      </div>
+
+      <div class="field">
+        <%= f.text_field :last_name, autofocus: true, :required =>true, :type =>"text", :placeholder =>"Last Name"%>
       </div>
 
       <div class="field">
@@ -59,8 +62,8 @@
       </div>
 
       <div class="actions">
-        <button type="button" class="btn btn-member">Need an Account?</button>
-        <%= f.submit "Log In", :class =>  "btn btn-sign-up"%>
+        <button type="button" class="btn btn-member">Have an Account?</button>
+        <%= f.submit "Register", :class =>  "btn btn-sign-up"%>
 
       </div>
     <% end %>
