@@ -1,15 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b1635de5-171c-4fa5-817f-f8981443538d" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/controllers/registrations_controller.rb" />
+    <list default="true" id="b1635de5-171c-4fa5-817f-f8981443538d" name="Default" comment="Forgot to add some files">
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/roles.coffee" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/roles.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/scaffolds.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/controllers/roles_controller.rb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/helpers/roles_helper.rb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/models/role.rb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/roles/_form.html.erb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/roles/_role.json.jbuilder" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/roles/edit.html.erb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/roles/index.html.erb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/roles/index.json.jbuilder" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/roles/new.html.erb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/roles/show.html.erb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/roles/show.json.jbuilder" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20181023150226_create_roles.rb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20181023150253_add_fields_to_users.rb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js_fix_for_login.patch" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test/controllers/roles_controller_test.rb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test/fixtures/roles.yml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test/models/role_test.rb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test/system/roles_test.rb" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
       <change beforePath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" afterPath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20181020221742_devise_create_users.rb" afterPath="$PROJECT_DIR$/db/migrate/20181020221742_devise_create_users.rb" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -45,8 +60,8 @@
       <file leaf-file-name="new.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/devise/sessions/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="19" column="2" lean-forward="false" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+            <state relative-caret-position="327">
+              <caret line="23" column="27" lean-forward="true" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -165,7 +180,7 @@
       </map>
     </option>
     <push-targets>
-      <push-target-info target-remote="origin" target-branch="master" repo="$PROJECT_DIR$" source="dev" />
+      <push-target-info target-remote="dev" target-branch="master" repo="$PROJECT_DIR$" source="dev" />
     </push-targets>
     <favorite-branches>
       <branch-storage>
@@ -841,7 +856,7 @@
       <workItem from="1540121374271" duration="26530000" />
       <workItem from="1540187884252" duration="1225000" />
       <workItem from="1540243609314" duration="15672000" />
-      <workItem from="1540302489253" duration="6704000" />
+      <workItem from="1540302489253" duration="8091000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1540012110350</created>
@@ -920,19 +935,26 @@
       <option name="project" value="LOCAL" />
       <updated>1540270174297</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Progress on log in/registration, added first and last name to User as well as Role table">
+      <created>1540313351501</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1540313351502</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77504000" />
+    <option name="totallyTimeSpent" value="78891000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="2578" height="1408" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32964426" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -941,7 +963,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32964426" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32964426" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32964426" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23398438" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -957,7 +979,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32964426" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -976,7 +997,9 @@
     <MESSAGE value="started login form styling" />
     <MESSAGE value="green logo" />
     <MESSAGE value="js fix for login" />
-    <option name="LAST_COMMIT_MESSAGE" value="js fix for login" />
+    <MESSAGE value="Progress on log in/registration, added first and last name to User as well as Role table" />
+    <MESSAGE value="Forgot to add some files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Forgot to add some files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1316,8 +1339,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/devise/sessions/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="19" column="2" lean-forward="false" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+        <state relative-caret-position="327">
+          <caret line="23" column="27" lean-forward="true" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
           <folding />
         </state>
       </provider>
