@@ -14,54 +14,56 @@
         });
     })
 </script>
+<%= devise_error_messages!%>
 
 <div class="wrapper">
-
+  
   <div class="signIn">
     <%= image_tag("compassLogoNameGreen.png", style: 'height:30px;width:auto;padding-bottom:35px;', class: 'logo')%>
-    <form>
+      <%= form_for(:user, :url => session_path(:user)) do |f| %>
+        <div class="field">
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", :required =>true, :type =>"text", :placeholder =>"Email"%>
+        </div>
 
-      <div>
-        <input required type="text" name="user_name" id="name" placeholder="Username">
+        <div class="field">
+          <%= f.password_field :password, autocomplete: "current-password", :id =>"password", :required =>true, :type =>"password", :placeholder =>"Password" %>
 
-      </div>
+        </div>
 
-      <div>
-        <input required type="password" name="user_password" id="password" placeholder="Password">
-
-      </div>
-
+        <div class="actions">
       <button type="button" class="btn btn-back">Need an Account?</button>
-      <button type="submit" class="btn btn-log-in">Log In</button>
+        <%= f.submit "Log In", :class =>  "btn btn-log-in"%>
 
-    </form>
+      </div>
+      <% end %>
   </div>
 
   <div class="signUp">
     <%= image_tag("compassLogoNameGreen.png", style: 'height:30px;width:auto;padding-bottom:35px;', class: 'logo')%>
-    <form>
-      <div>
-        <input required type="text" name="user_name" id="name" placeholder="Username">
+    <%= form_for(:user, :url => registration_path(:user)) do |f| %>
 
-      </div>
-      <div>
-        <input required type="email" name="user_email" id="email" placeholder="Email">
-
-      </div>
-      <div>
-        <input required type="password" name="user_password" id="password" placeholder="Password">
-
-      </div>
-      <div>
-        <input required type="tel" name="user_phone" id="phone" placeholder="Phone">
-
+      <div class="field">
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", :required =>true, :type =>"text", :placeholder =>"Email"%>
       </div>
 
-      <button type="button" class="btn btn-member">Have an Account?</button>
-      <button type="submit" class="btn btn-sign-up">Sign Up</button>
+      <div class="field">
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", :required =>true, :type =>"text", :placeholder =>"Email"%>
+      </div>
 
-    </form>
+      <div class="field">
+        <%= f.password_field :password, autocomplete: "new-password", :id =>"password", :required =>true, :type =>"password", :placeholder =>"Password (6 characters minimum)" %>
+
+      </div>
+      <div class="field">
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", :id =>"password", :required =>true, :type =>"password", :placeholder =>"Confirm Password"  %>
+      </div>
+
+      <div class="actions">
+        <button type="button" class="btn btn-member">Need an Account?</button>
+        <%= f.submit "Log In", :class =>  "btn btn-sign-up"%>
+
+      </div>
+    <% end %>
 
   </div>
-
 </div>
