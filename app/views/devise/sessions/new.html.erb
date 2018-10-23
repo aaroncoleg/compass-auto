@@ -1,16 +1,18 @@
-<script>
-    var $signUp = $('.signUp');
-    var $signIn = $('.signIn');
-    $(".btn-member").click(function() {
-        console.log("Message");
-        $signUp.fadeOut('slow');
-        $signIn.fadeIn('slow');
-    });
-    $(".btn-back").click(function() {
-        console.log("Message");
-        $signIn.fadeOut('slow');
-        $signUp.fadeIn('slow');
-    });
+<script type="text/javascript">
+    $(document).ready(function() {
+        var $signUp = $('.signUp');
+        var $signIn = $('.signIn');
+        $(".btn-member").click(function () {
+            console.log("Message");
+            $signUp.fadeOut('slow');
+            $signIn.fadeIn('slow');
+        });
+        $(".btn-back").click(function () {
+            console.log("Message");
+            $signIn.fadeOut('slow');
+            $signUp.fadeIn('slow');
+        });
+    })
 </script>
 
 <div class="wrapper">
