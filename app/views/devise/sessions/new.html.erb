@@ -1,28 +1,65 @@
-<div>
-<h2>Log in</h2>
+<script>
+    var $signUp = $('.signUp');
+    var $signIn = $('.signIn');
+    $(".btn-member").click(function() {
+        console.log("Message");
+        $signUp.fadeOut('slow');
+        $signIn.fadeIn('slow');
+    });
+    $(".btn-back").click(function() {
+        console.log("Message");
+        $signIn.fadeOut('slow');
+        $signUp.fadeIn('slow');
+    });
+</script>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<div class="wrapper">
+
+  <div class="signIn">
+    <%= image_tag("compassLogoNameGreen.png", style: 'height:30px;width:auto;padding-bottom:35px;', class: 'logo')%>
+    <form>
+
+      <div>
+        <input required type="text" name="user_name" id="name" placeholder="Username">
+
+      </div>
+
+      <div>
+        <input required type="password" name="user_password" id="password" placeholder="Password">
+
+      </div>
+
+      <button type="button" class="btn btn-back">Need an Account?</button>
+      <button type="submit" class="btn btn-log-in">Log In</button>
+
+    </form>
   </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
+  <div class="signUp">
+    <%= image_tag("compassLogoNameGreen.png", style: 'height:30px;width:auto;padding-bottom:35px;', class: 'logo')%>
+    <form>
+      <div>
+        <input required type="text" name="user_name" id="name" placeholder="Username">
+
+      </div>
+      <div>
+        <input required type="email" name="user_email" id="email" placeholder="Email">
+
+      </div>
+      <div>
+        <input required type="password" name="user_password" id="password" placeholder="Password">
+
+      </div>
+      <div>
+        <input required type="tel" name="user_phone" id="phone" placeholder="Phone">
+
+      </div>
+
+      <button type="button" class="btn btn-member">Have an Account?</button>
+      <button type="submit" class="btn btn-sign-up">Sign Up</button>
+
+    </form>
+
   </div>
 
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end -%>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
 </div>
