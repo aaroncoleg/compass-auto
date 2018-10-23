@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b1635de5-171c-4fa5-817f-f8981443538d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
-      <change beforePath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" afterPath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change beforePath="$PROJECT_DIR$/app/views/pages/form_login.html.erb" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/config/initializers/assets.rb" afterPath="$PROJECT_DIR$/config/initializers/assets.rb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -795,7 +789,7 @@
       <workItem from="1540060552575" duration="26639000" />
       <workItem from="1540121374271" duration="26530000" />
       <workItem from="1540187884252" duration="1225000" />
-      <workItem from="1540243609314" duration="13239000" />
+      <workItem from="1540243609314" duration="13496000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1540012110350</created>
@@ -825,11 +819,18 @@
       <option name="project" value="LOCAL" />
       <updated>1540188385827</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="started login form styling">
+      <created>1540267971306</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1540267971306</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68367000" />
+    <option name="totallyTimeSpent" value="68624000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2409" y="182" width="2418" height="1468" extended-state="6" />
@@ -878,7 +879,8 @@
     <MESSAGE value="Added navigation bar, Devise, and root page" />
     <MESSAGE value="Attempting to set up Postgres" />
     <MESSAGE value="Renamed project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Renamed project" />
+    <MESSAGE value="started login form styling" />
+    <option name="LAST_COMMIT_MESSAGE" value="started login form styling" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
