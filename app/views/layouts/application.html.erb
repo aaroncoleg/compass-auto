@@ -25,9 +25,6 @@
       <li>
         <%= link_to 'Customers', root_path, :class => current_class?(user_session_path)%>
       </li>
-      <li>
-        <%= link_to 'Users', users_show_path, :class => current_class?(user_session_path)%>
-      </li>
           <% if user_signed_in? %>
         <li>
           <%= link_to '<i class="fa fa-user-circle" style="font-size:25px; vertical-align: middle;"></i>'.html_safe, account_show_path, class:"user_icon"%>        </li>

@@ -9,7 +9,7 @@
   </thead>
 
   <tbody>
-<% User.all.each do |user| %>
+<% User.where.not(id: current_user.id).each do |user| %>
   <tr>
     <td><%= user.email %></td>
     <td><%= user.first_name + ' ' + user.last_name %></td>

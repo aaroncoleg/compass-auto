@@ -12,3 +12,5 @@ Role.create([{ name: 'User', level:  1},
                    { name: 'Inventory Manager', level:  5},
                    { name: 'Dealership Owner', level:  6}
                   ])
+
+User.create([{first_name: 'Johnny', last_name: 'Smith', email:'default@gmail.com', password: 'default', role_id: 6}])
