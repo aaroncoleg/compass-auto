@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Role.create([{ name: 'User', level:  1},
-                   { name: 'Sales person', level: 2 },
-                   { name: 'Sales manager', level: 3 },
-                   { name: 'Finance manager', level:  4},
-                   { name: 'Inventory manager', level:  5},
-                   { name: 'Dealership owner', level:  6}
+                   { name: 'Sales Person', level: 2 },
+                   { name: 'Sales Manager', level: 3 },
+                   { name: 'Finance Manager', level:  4},
+                   { name: 'Inventory Manager', level:  5},
+                   { name: 'Dealership Owner', level:  6}
                   ])

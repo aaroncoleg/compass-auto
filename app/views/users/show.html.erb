@@ -1,0 +1,10 @@
+<div class="wrapper">
+  <div class="pane">
+    <%= @user.first_name + ' ' + @user.last_name%>
+    <%= form_for(@user) do |f| %>
+    <%= f.collection_select :role_id, Role.all, :id, :name%>
+      <%= f.submit %>
+    <% end %>
+
+  </div>
+</div>

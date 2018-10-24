@@ -108,24 +108,28 @@ body {
     margin: 0 0 0 6px;
 }
 
-
-
-
-
-
-
-
-.wrapper
-{
-    max-width: 400px;
-    margin: auto;
-    padding-right: 10px;
-    padding-left: 10px;
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    border: none;
+    -webkit-box-shadow: 0 0 0px 1000px #eee inset;
+    transition: background-color 5000s ease-in-out 0s;
 }
 
-/* Form styles */
-.signUp,
-.signIn
+
+
+
+
+
+
+
+.pane
 {
     position: absolute;
     top: 150px;
@@ -141,97 +145,110 @@ body {
     box-shadow: 0 0 15px #333;
 }
 
-.signIn
+.wrapper
 {
-
-    height: 240px;
-}
-
-.signUp
-{
-    display: none;
-    height: 405px;
+    max-width: 400px;
+    margin: auto;
+    padding-right: 10px;
+    padding-left: 10px;
 }
 
 
-form div
-{
-    width: 100%;
 
-    margin-bottom: 35px;
-}
 
-/* Input text field styles */
 
-input
-{
-    font-size: 1.1em;
-    font-weight: normal;
 
-    display: block;
 
+
+
+
+table {
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.25;
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: auto;
+    padding: 0;
     width: 85%;
-    margin: 0 auto;
-    height:45px;
+    table-layout: fixed;
+    margin-top: 50px;
+}
 
-    -webkit-transition: box-shadow .3s;
-    transition: box-shadow .3s;
-    transition: .25s linear;
+table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+}
+
+table tr {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: .35em;
+}
+
+table th,
+table td {
+    padding: .625em;
     text-align: center;
-
-    color: #035127;
-    border: 0;
-    outline: 0;
-    background: #eee;
-    box-shadow: 0 0 0 2px transparent;
-}
-.messages
-{
-    display: block;
-    top:500px;
-
 }
 
-input:focus
-{
-    animation: boxShadow .3s backwards;
-
-    box-shadow: 0 0 0 2px rgba(162, 156, 156, 0.65);
+table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
 }
-
-/* Button styles  */
-
-.btn
+a:link,a:visited,a:active
 {
-    float: right;
+    color: #786c6c;
 
-    width: 50%;
-    height: auto;
-    padding-top: 23px;
-    padding-bottom: 23px;
-
-    cursor: pointer;
-
-    border: 0;
-    border-top: 1px solid #a9a9a9;
-    outline: 0;
 }
+@media screen and (max-width: 600px) {
+    table {
+        border: 0;
+    }
 
-.btn-member,
-.btn-back
-{
-    font-size: .9em;
-    height:69px;
+    table caption {
+        font-size: 1.3em;
+    }
 
-    background: #fafafa;
-}
+    table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
 
-.btn-sign-up,
-.btn-log-in
-{
-    font-size: 1.2em;
-    font-weight: bold;
+    table tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: .625em;
+    }
 
-    color: white;
-    background: #035127;
+    table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        text-align: right;
+    }
+
+    table td::before {
+        /*
+        * aria-label has no advantage, it won't be read inside a table
+        content: attr(aria-label);
+        */
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    table td:last-child {
+        border-bottom: 0;
+    }
+
+
+
 }

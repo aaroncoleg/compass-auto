@@ -1,0 +1,120 @@
+.wrapper
+{
+    max-width: 400px;
+    margin: auto;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+/* Form styles */
+.signUp,
+.signIn
+{
+    position: absolute;
+    top: 150px;
+    right: 0;
+    left: 0;
+
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    padding: 20px 0 60px 0;
+
+    background: #fafafa;
+    box-shadow: 0 0 15px #333;
+}
+
+.signIn
+{
+
+    height: 240px;
+}
+
+.signUp
+{
+    display: none;
+    height: 487px;
+}
+
+
+form div
+{
+    width: 100%;
+
+    margin-bottom: 35px;
+}
+
+/* Input text field styles */
+
+input
+{
+    font-size: 1.1em;
+    font-weight: normal;
+
+    display: block;
+
+    width: 85%;
+    margin: 0 auto;
+    height:45px;
+
+    -webkit-transition: box-shadow .3s;
+    transition: box-shadow .3s;
+    transition: .25s linear;
+    text-align: center;
+
+    color: black;
+    border: 0;
+    outline: 0;
+    background: #eee;
+    box-shadow: 0 0 0 2px transparent;
+}
+.messages
+{
+    display: block;
+    top:500px;
+
+}
+
+input:focus
+{
+    animation: boxShadow .3s backwards;
+
+    box-shadow: 0 0 0 2px rgba(162, 156, 156, 0.65);
+}
+
+/* Button styles  */
+
+.btn
+{
+    float: right;
+
+    width: 50%;
+    height: auto;
+    padding-top: 23px;
+    padding-bottom: 23px;
+
+    cursor: pointer;
+
+    border: 0;
+    border-top: 1px solid #a9a9a9;
+    outline: 0;
+}
+
+.btn-member,
+.btn-back
+{
+    font-size: .9em;
+    height:69px;
+
+    background: #fafafa;
+}
+
+.btn-sign-up,
+.btn-log-in
+{
+    font-size: 1.2em;
+    font-weight: bold;
+
+    color: white;
+    background: #035127;
+}
