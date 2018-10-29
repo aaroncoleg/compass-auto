@@ -7,7 +7,7 @@
     <%= "Position: " + Role.find(current_user.role_id).name %>
     <br><br>
 
-    <% if (Role.find(current_user.role_id).level >= 6) %>
+    <% if (check_lvl(6)) %>
       <%= link_to 'Manage Users', users_show_path%>
       <br>
       <br>
