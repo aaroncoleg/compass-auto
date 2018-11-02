@@ -1,0 +1,57 @@
+<%= form_with(model: inventory, local: true) do |form| %>
+  <% if inventory.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(inventory.errors.count, "error") %> prohibited this inventory from being saved:</h2>
+
+      <ul>
+      <% inventory.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :miles %>
+    <%= form.number_field :miles %>
+  </div>
+
+  <div class="field">
+    <%= form.label :year %>
+    <%= form.number_field :year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :model %>
+    <%= form.text_field :model %>
+  </div>
+
+  <div class="field">
+    <%= form.label :vin %>
+    <%= form.number_field :vin %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sold %>
+    <%= form.check_box :sold %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.text_field :price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :color_id %>
+    <%= form.text_field :color_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :make_id %>
+    <%= form.text_field :make_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

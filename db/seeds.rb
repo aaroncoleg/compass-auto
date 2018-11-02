@@ -14,3 +14,11 @@ Role.create([{ name: 'User', level:  1},
                   ])
 
 User.create([{first_name: 'Johnny', last_name: 'Smith', email:'default@gmail.com', password: 'default', role_id: 6}])
+
+Make.create(attributes [{name: 'Toyota'},
+                        {name: 'Chevrolet'},
+                        {name: 'Honda'},
+                        {name: 'Hyundai'},
+                        {name: 'KIA'},
+                        {name: ''}
+                       ])
