@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
   resources :quotes
   resources :roles
+  resources :colors
+      resources :customers
+  resources :inventories
+  resources :makes
+  resources :states
+
   devise_for :users, :controllers => { registrations: 'registrations'}
   resources :users, :only => [:show]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
