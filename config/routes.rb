@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :customers
+  resources :states
   resources :roles
   devise_for :users, :controllers => { registrations: 'registrations'}
   resources :users, :only => [:show]

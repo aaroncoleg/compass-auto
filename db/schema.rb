@@ -10,38 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_02_222753) do
+ActiveRecord::Schema.define(version: 2018_11_02_214512) do
 
-  create_table "colors", force: :cascade do |t|
-    t.string "name"
+  create_table "customers", force: :cascade do |t|
+    t.string "last_name"
+    t.string "first_name"
+    t.string "street_address"
+    t.string "city"
+    t.integer "state_id"
+    t.string "zip_code"
+    t.string "phone_number"
+    t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "inventories", force: :cascade do |t|
-    t.integer "miles"
-    t.integer "year"
-    t.string "model"
-    t.integer "vin"
-    t.boolean "sold"
-    t.decimal "price"
-    t.integer "color_id"
-    t.integer "make_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["color_id"], name: "index_inventories_on_color_id"
-    t.index ["make_id"], name: "index_inventories_on_make_id"
-  end
-
-  create_table "makes", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.index ["state_id"], name: "index_customers_on_state_id"
   end
 
   create_table "roles", force: :cascade do |t|
     t.string "name"
     t.integer "level"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "states", force: :cascade do |t|
+    t.string "state_name"
+    t.string "state_abbr"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
