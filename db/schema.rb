@@ -10,7 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_24_041916) do
+ActiveRecord::Schema.define(version: 2018_11_02_222753) do
+
+  create_table "colors", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "inventories", force: :cascade do |t|
+    t.integer "miles"
+    t.integer "year"
+    t.string "model"
+    t.integer "vin"
+    t.boolean "sold"
+    t.decimal "price"
+    t.integer "color_id"
+    t.integer "make_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["color_id"], name: "index_inventories_on_color_id"
+    t.index ["make_id"], name: "index_inventories_on_make_id"
+  end
+
+  create_table "makes", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "roles", force: :cascade do |t|
     t.string "name"
