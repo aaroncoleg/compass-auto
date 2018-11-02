@@ -10,11 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_24_041916) do
+ActiveRecord::Schema.define(version: 2018_11_02_214512) do
+
+  create_table "customers", force: :cascade do |t|
+    t.string "last_name"
+    t.string "first_name"
+    t.string "street_address"
+    t.string "city"
+    t.integer "state_id"
+    t.string "zip_code"
+    t.string "phone_number"
+    t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["state_id"], name: "index_customers_on_state_id"
+  end
 
   create_table "roles", force: :cascade do |t|
     t.string "name"
     t.integer "level"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "states", force: :cascade do |t|
+    t.string "state_name"
+    t.string "state_abbr"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
