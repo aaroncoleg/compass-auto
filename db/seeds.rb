@@ -20,5 +20,14 @@ Make.create(attributes [{name: 'Toyota'},
                         {name: 'Honda'},
                         {name: 'Hyundai'},
                         {name: 'KIA'},
-                        {name: ''}
+                        {name: 'Ford'},
+                        {name: 'Nissan'}
                        ])
+Color.create([{name: 'Red'},
+              {name: 'Black'},
+              {name: 'Blue'},
+              {name: 'Green'},
+              {name: 'Brown'},
+              {name: 'Yellow'},
+              {name: 'Red'}
+             ])
