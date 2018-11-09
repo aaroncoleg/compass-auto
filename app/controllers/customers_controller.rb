@@ -4,7 +4,8 @@ class CustomersController < ApplicationController
   # GET /customers
   # GET /customers.json
   def index
-    @customers = Customer.all
+
+    @customers = Customer.where(["first_name LIKE ?","%#{params[:first_name_search]}%"]).where(["last_name LIKE ?","%#{params[:last_name_search]}%"]).where(["email LIKE ?","%#{params[:email_search]}%"]).order(:last_name).paginate(:page => params[:page])
   end
 
   # GET /customers/1

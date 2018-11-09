@@ -1,10 +1,4 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+# Lookups
 Role.create([{ name: 'User', level:  1},
                    { name: 'Sales Person', level: 2 },
                    { name: 'Sales Manager', level: 3 },
@@ -13,12 +7,98 @@ Role.create([{ name: 'User', level:  1},
                    { name: 'Dealership Owner', level:  6}
                   ])
 
+Make.create( [{name: 'Acura'}, {name: 'Alfa Romeo'}, {name: 'Aptera'}, {name: 'Aston Martin'}, {name: 'Audi'}, {name: 'Austin'}, {name: 'Bentley'},
+              {name: 'BMW'}, {name: 'Bugatti'}, {name: 'Buick'}, {name: 'Cadillac'}, {name: 'Chevrolet'}, {name: 'Chrysler'}, {name: 'Citroen'},
+              {name: 'Corbin'}, {name: 'Daewoo'}, {name: 'Daihatsu'}, {name: 'Dodge'}, {name: 'Eagle'}, {name: 'Fairthorpe'}, {name: 'Ferrari'},
+              {name: 'Fiat'}, {name: 'Fillmore'}, {name: 'Foose'}, {name: 'Ford'}, {name: 'Geo'}, {name: 'GMC'}, {name: 'Holden'}, {name: 'Honda'},
+              {name: 'Hummer'}, {name: 'Hyundai'}, {name: 'Infiniti'}, {name: 'Isuzu'}, {name: 'Jaguar'}, {name: 'Jeep'}, {name: 'Kia'},
+              {name: 'Lamborghini'}, {name: 'Land Rover'}, {name: 'Lexus'}, {name: 'Lincoln'}, {name: 'Lotus'}, {name: 'Maserati'}, {name: 'Maybach'},
+              {name: 'Mazda'}, {name: 'Mercedes-Benz'}, {name: 'Mercury'}, {name: 'MINI'}, {name: 'Mitsubishi'}, {name: 'Morgan'}, {name: 'Nissan'},
+              {name: 'Oldsmobile'}, {name: 'Panoz'}, {name: 'Peugeot'}, {name: 'Plymouth'}, {name: 'Pontiac'}, {name: 'Porsche'}, {name: 'Ram'},
+              {name: 'Rambler'}, {name: 'Renault'}, {name: 'Rolls-Royce'}, {name: 'Saab'}, {name: 'Saturn'}, {name: 'Scion'}, {name: 'Shelby'},
+              {name: 'Smart'}, {name: 'Spyker'}, {name: 'Studebaker'}, {name: 'Subaru'}, {name: 'Suzuki'}, {name: 'Tesla'}, {name: 'Toyota'}, {name: 'Volkswagen'}, {name: 'Volvo'}])
+
+State.create([
+                 { :state_name => 'Alabama', :state_abbr => 'AL'}, { :state_name => 'Alaska', :state_abbr => 'AK'}, { :state_name => 'Arizona', :state_abbr => 'AZ'}, { :state_name => 'Arkansas', :state_abbr => 'AR'}, { :state_name => 'California', :state_abbr => 'CA'}, { :state_name => 'Colorado', :state_abbr => 'CO'},
+                 { :state_name => 'Connecticut', :state_abbr => 'CT'}, { :state_name => 'Delaware', :state_abbr => 'DE'}, { :state_name => 'District of Columbia', :state_abbr => 'DC'}, { :state_name => 'Florida', :state_abbr => 'FL'},
+                 { :state_name => 'Georgia', :state_abbr => 'GA'}, { :state_name => 'Hawaii', :state_abbr => 'HI'}, { :state_name => 'Idaho', :state_abbr => 'ID'}, { :state_name => 'Illinois', :state_abbr => 'IL'}, { :state_name => 'Indiana', :state_abbr => 'IN'}, { :state_name => 'Iowa', :state_abbr => 'IA'}, { :state_name => 'Kansas', :state_abbr => 'KS'},
+                 { :state_name => 'Kentucky', :state_abbr => 'KY'}, { :state_name => 'Louisiana', :state_abbr => 'LA'}, { :state_name => 'Maine', :state_abbr => 'ME'}, { :state_name => 'Maryland', :state_abbr => 'MD'}, { :state_name => 'Massachusetts', :state_abbr => 'MA'}, { :state_name => 'Michigan', :state_abbr => 'MI'}, { :state_name => 'Minnesota', :state_abbr => 'MN'},
+                 { :state_name => 'Mississippi', :state_abbr => 'MS'}, { :state_name => 'Missouri', :state_abbr => 'MO'}, { :state_name => 'Montana', :state_abbr => 'MT'}, { :state_name => 'Nebraska', :state_abbr => 'NE'},
+                 { :state_name => 'Nevada', :state_abbr => 'NV'}, { :state_name => 'New Hampshire', :state_abbr => 'NH'}, { :state_name => 'New Jersey', :state_abbr => 'NJ'}, { :state_name => 'New Mexico', :state_abbr => 'NM'},
+                 { :state_name => 'New York', :state_abbr => 'NY'}, { :state_name => 'North Carolina', :state_abbr => 'NC'}, { :state_name => 'North Dakota', :state_abbr => 'ND'}, { :state_name => 'Ohio', :state_abbr => 'OH'}, { :state_name => 'Oklahoma', :state_abbr => 'OK'}, { :state_name => 'Oregon', :state_abbr => 'OR'},
+                 { :state_name => 'Pennsylvania', :state_abbr => 'PA'}, { :state_name => 'Rhode Island', :state_abbr => 'RI'}, { :state_name => 'South Carolina', :state_abbr => 'SC'}, { :state_name => 'South Dakota', :state_abbr => 'SD'}, { :state_name => 'Tennessee', :state_abbr => 'TN'}, { :state_name => 'Texas', :state_abbr => 'TX'}, { :state_name => 'Utah', :state_abbr => 'UT'},
+                 { :state_name => 'Vermont', :state_abbr => 'VT'}, { :state_name => 'Virginia', :state_abbr => 'VA'}, { :state_name => 'Washington', :state_abbr => 'WA'}, { :state_name => 'West Virginia', :state_abbr => 'WV'}, { :state_name => 'Wisconsin', :state_abbr => 'WI'}, { :state_name => 'Wyoming', :state_abbr => 'WY'}
+             ])
+#Sample Data
 User.create([{first_name: 'Johnny', last_name: 'Smith', email:'default@gmail.com', password: 'default', role_id: 6}])
 
-Make.create(attributes [{name: 'Toyota'},
-                        {name: 'Chevrolet'},
-                        {name: 'Honda'},
-                        {name: 'Hyundai'},
-                        {name: 'KIA'},
-                        {name: ''}
-                       ])
+Customer.create([{last_name: 'Brocket', first_name: 'Rudy', street_address: '784 Westridge Court', city: 'Greensboro', state_id: '34', zip_code: '27425', phone_number: '336-553-0024', email: 'rbrocket0@angelfire.com'},
+                 {last_name: 'Sturch', first_name: 'Ellie', street_address: '852 Sutteridge Way', city: 'Phoenix', state_id: '3', zip_code: '85083', phone_number: '602-284-5965', email: 'esturch1@smh.com.au'},
+                 {last_name: 'Shoebotham', first_name: 'Emmanuel', street_address: '9 Summerview Center', city: 'Colorado Springs', state_id: '6', zip_code: '80945', phone_number: '719-802-4944', email: 'eshoebotham2@mail.ru'},
+                 {last_name: 'Croster', first_name: 'Fionna', street_address: '964 Fordem Road', city: 'Peoria', state_id: '14', zip_code: '61629', phone_number: '309-948-3442', email: 'fcroster3@spiegel.de'},
+                 {last_name: 'Delwater', first_name: 'Hobard', street_address: '85 Duke Junction', city: 'Detroit', state_id: '23', zip_code: '48217', phone_number: '313-929-5016', email: 'hdelwater4@guardian.co.uk'},
+                 {last_name: 'Dunkerton', first_name: 'Nelly', street_address: '84 Erie Parkway', city: 'Jacksonville', state_id: '10', zip_code: '32220', phone_number: '904-952-2558', email: 'ndunkerton5@zdnet.com'},
+                 {last_name: 'Wanne', first_name: 'Tommie', street_address: '4817 Hazelcrest Circle', city: 'Miami', state_id: '10', zip_code: '33124', phone_number: '786-319-2584', email: 'twanne6@newyorker.com'},
+                 {last_name: 'Grunwald', first_name: 'Karin', street_address: '8578 Graceland Plaza', city: 'West Palm Beach', state_id: '10', zip_code: '33411', phone_number: '561-982-1714', email: 'kgrunwald7@fda.gov'},
+                 {last_name: 'Gerhts', first_name: 'Lila', street_address: '28460 Huxley Avenue', city: 'Fort Wayne', state_id: '15', zip_code: '46867', phone_number: '260-168-9338', email: 'lgerhts8@ezinearticles.com'},
+                 {last_name: 'Newrick', first_name: 'Franz', street_address: '556 Transport Crossing', city: 'Pocatello', state_id: '13', zip_code: '83206', phone_number: '208-868-7337', email: 'fnewrick9@wikia.com'},
+                 {last_name: 'Laddle', first_name: 'Ninnetta', street_address: '031 Kensington Junction', city: 'Atlanta', state_id: '11', zip_code: '30316', phone_number: '404-935-4098', email: 'nladdlea@clickbank.net'},
+                 {last_name: 'Killich', first_name: 'Kimberly', street_address: '32984 John Wall Street', city: 'Decatur', state_id: '14', zip_code: '62525', phone_number: '217-775-5131', email: 'kkillichb@ted.com'},
+                 {last_name: 'Anslow', first_name: 'Willie', street_address: '63009 Acker Hill', city: 'York', state_id: '39', zip_code: '17405', phone_number: '717-365-5455', email: 'wanslowc@squidoo.com'},
+                 {last_name: 'Alekseicik', first_name: 'Billie', street_address: '964 Delladonna Park', city: 'Indianapolis', state_id: '15', zip_code: '46216', phone_number: '317-115-2147', email: 'balekseicikd@unicef.org'},
+                 {last_name: 'Blackborne', first_name: 'Rodd', street_address: '2 Kings Street', city: 'Oklahoma City', state_id: '37', zip_code: '73147', phone_number: '405-545-3785', email: 'rblackbornee@trellian.com'},
+                 {last_name: 'Reames', first_name: 'Wendell', street_address: '890 Esker Way', city: 'Ocala', state_id: '10', zip_code: '34474', phone_number: '352-484-3741', email: 'wreamesf@trellian.com'},
+                 {last_name: 'Renahan', first_name: 'Shayla', street_address: '964 Northport Alley', city: 'Boise', state_id: '13', zip_code: '83705', phone_number: '208-474-4190', email: 'srenahang@fema.gov'},
+                 {last_name: 'Kingdom', first_name: 'Pierrette', street_address: '018 North Street', city: 'Killeen', state_id: '44', zip_code: '76544', phone_number: '254-360-8863', email: 'pkingdomh@netlog.com'},
+                 {last_name: 'Dellow', first_name: 'Angelina', street_address: '1139 Kinsman Point', city: 'San Luis Obispo', state_id: '5', zip_code: '93407', phone_number: '805-795-9303', email: 'adellowi@pbs.org'},
+                 {last_name: 'Mc Kellen', first_name: 'Maureen', street_address: '78163 Magdeline Point', city: 'Wilmington', state_id: '8', zip_code: '19805', phone_number: '302-860-5378', email: 'mmckellenj@yolasite.com'},
+                 {last_name: 'Gisbye', first_name: 'Gus', street_address: '57 Hagan Place', city: 'New York City', state_id: '33', zip_code: '10184', phone_number: '212-360-7985', email: 'ggisbyek@cafepress.com'},
+                 {last_name: 'Lucien', first_name: 'Binni', street_address: '34940 Fremont Alley', city: 'Billings', state_id: '27', zip_code: '59105', phone_number: '406-188-4237', email: 'blucienl@dedecms.com'},
+                 {last_name: 'Duiged', first_name: 'Melodie', street_address: '005 Corry Parkway', city: 'Philadelphia', state_id: '39', zip_code: '19104', phone_number: '267-314-4999', email: 'mduigedm@ox.ac.uk'},
+                 {last_name: 'Newsome', first_name: 'Pearl', street_address: '63 Clyde Gallagher Pass', city: 'Hampton', state_id: '47', zip_code: '23668', phone_number: '757-234-7410', email: 'pnewsomen@nih.gov'},
+                 {last_name: 'Cossey', first_name: 'Carly', street_address: '33 Gerald Pass', city: 'Minneapolis', state_id: '24', zip_code: '55417', phone_number: '612-121-0930', email: 'ccosseyo@chicagotribune.com'},
+                 {last_name: 'Dalglish', first_name: 'Darn', street_address: '51 Transport Place', city: 'Detroit', state_id: '23', zip_code: '48217', phone_number: '313-421-8021', email: 'ddalglishp@lycos.com'},
+                 {last_name: 'Ropp', first_name: 'Gard', street_address: '92967 Ridgeway Court', city: 'Dallas', state_id: '44', zip_code: '75367', phone_number: '214-743-2220', email: 'groppq@baidu.com'},
+                 {last_name: 'Holburn', first_name: 'Alix', street_address: '69761 Hanson Court', city: 'Bowie', state_id: '21', zip_code: '20719', phone_number: '240-905-1455', email: 'aholburnr@meetup.com'},
+                 {last_name: 'Klarzynski', first_name: 'Maryanne', street_address: '34 Schiller Parkway', city: 'Macon', state_id: '11', zip_code: '31296', phone_number: '478-915-9379', email: 'mklarzynskis@un.org'},
+                 {last_name: 'Josskowitz', first_name: 'Zelig', street_address: '176 Merchant Hill', city: 'Roanoke', state_id: '47', zip_code: '24029', phone_number: '540-389-7577', email: 'zjosskowitzt@mapy.cz'},
+                 {last_name: 'Stoggell', first_name: 'Milty', street_address: '8 Comanche Pass', city: 'Arvada', state_id: '6', zip_code: '80005', phone_number: '720-450-6970', email: 'mstoggellu@1688.com'},
+                 {last_name: 'Ricco', first_name: 'Holli', street_address: '40 Lukken Drive', city: 'Daytona Beach', state_id: '10', zip_code: '32128', phone_number: '386-838-5537', email: 'hriccov@stumbleupon.com'},
+                 {last_name: 'Blenkin', first_name: 'Birgitta', street_address: '0303 Crownhardt Avenue', city: 'Jacksonville', state_id: '10', zip_code: '32244', phone_number: '904-420-8549', email: 'bblenkinw@51.la'},
+                 {last_name: 'Corstorphine', first_name: 'Carine', street_address: '0 Kingsford Circle', city: 'Hot Springs National Park', state_id: '4', zip_code: '71914', phone_number: '501-219-0756', email: 'ccorstorphinex@cnet.com'},
+                 {last_name: 'Cluckie', first_name: 'Celka', street_address: '339 North Terrace', city: 'Chicago', state_id: '14', zip_code: '60674', phone_number: '312-258-0151', email: 'ccluckiey@wp.com'},
+                 {last_name: 'Bortolotti', first_name: 'Caroljean', street_address: '6 Pepper Wood Road', city: 'Dayton', state_id: '36', zip_code: '45426', phone_number: '937-653-4361', email: 'cbortolottiz@home.pl'},
+                 {last_name: 'Peltzer', first_name: 'Reeva', street_address: '8169 Gateway Hill', city: 'Omaha', state_id: '28', zip_code: '68105', phone_number: '402-349-4480', email: 'rpeltzer10@netlog.com'},
+                 {last_name: 'Jouhning', first_name: 'Gabriel', street_address: '21 Prairieview Alley', city: 'Fairfax', state_id: '47', zip_code: '22036', phone_number: '571-710-3445', email: 'gjouhning11@cnet.com'},
+                 {last_name: 'Bland', first_name: 'Lalo', street_address: '43682 Bobwhite Crossing', city: 'Wichita', state_id: '17', zip_code: '67210', phone_number: '316-841-9259', email: 'lbland12@ustream.tv'},
+                 {last_name: 'Hessay', first_name: 'Eddy', street_address: '1140 Beilfuss Junction', city: 'Hartford', state_id: '7', zip_code: '6152', phone_number: '860-446-4651', email: 'ehessay13@tinyurl.com'},
+                 {last_name: 'Barstow', first_name: 'Laverne', street_address: '3985 Nevada Road', city: 'North Las Vegas', state_id: '29', zip_code: '89087', phone_number: '702-676-1440', email: 'lbarstow14@elegantthemes.com'},
+                 {last_name: 'Frid', first_name: 'Arabela', street_address: '799 Hazelcrest Circle', city: 'Houston', state_id: '44', zip_code: '77045', phone_number: '713-749-8933', email: 'afrid15@engadget.com'},
+                 {last_name: 'Carson', first_name: 'Candis', street_address: '9 Hintze Avenue', city: 'Milwaukee', state_id: '50', zip_code: '53234', phone_number: '414-138-5322', email: 'ccarson16@netvibes.com'},
+                 {last_name: 'Tesmond', first_name: 'Kalvin', street_address: '68 Fairfield Park', city: 'Elmira', state_id: '33', zip_code: '14905', phone_number: '607-747-4851', email: 'ktesmond17@hexun.com'},
+                 {last_name: 'Kinchin', first_name: 'Cristobal', street_address: '75515 Melrose Way', city: 'Tucson', state_id: '3', zip_code: '85737', phone_number: '520-151-4838', email: 'ckinchin18@virginia.edu'},
+                 {last_name: 'Cready', first_name: 'Everard', street_address: '61706 Moose Circle', city: 'Dallas', state_id: '44', zip_code: '75342', phone_number: '469-117-7868', email: 'ecready19@goo.ne.jp'},
+                 {last_name: 'Pindell', first_name: 'Marcelline', street_address: '558 Sheridan Court', city: 'Hyattsville', state_id: '21', zip_code: '20784', phone_number: '301-818-0091', email: 'mpindell1a@theatlantic.com'},
+                 {last_name: 'Yule', first_name: 'Brandtr', street_address: '018 Towne Way', city: 'New York City', state_id: '33', zip_code: '10039', phone_number: '917-481-4232', email: 'byule1b@hibu.com'},
+                 {last_name: 'Dible', first_name: 'Arte', street_address: '96084 Fairview Drive', city: 'Oklahoma City', state_id: '37', zip_code: '73197', phone_number: '405-431-8162', email: 'adible1c@abc.net.au'},
+                 {last_name: 'McCrystal', first_name: 'Hobart', street_address: '7 Tomscot Trail', city: 'Orange', state_id: '5', zip_code: '92867', phone_number: '714-243-6048', email: 'hmccrystal1d@sakura.ne.jp'},
+                 {last_name: 'Cracker', first_name: 'Wakefield', street_address: '618 Knutson Plaza', city: 'Portland', state_id: '38', zip_code: '97221', phone_number: '503-711-7479', email: 'wcracker1e@prweb.com'},
+                 {last_name: 'Ahren', first_name: 'Dyanna', street_address: '4977 Autumn Leaf Point', city: 'Raleigh', state_id: '34', zip_code: '27610', phone_number: '919-541-1073', email: 'dahren1f@google.com.br'},
+                 {last_name: 'Pryell', first_name: 'Vidovik', street_address: '44242 Ohio Circle', city: 'Topeka', state_id: '17', zip_code: '66667', phone_number: '785-127-5957', email: 'vpryell1g@cnn.com'},
+                 {last_name: 'Flack', first_name: 'Mechelle', street_address: '23380 Katie Pass', city: 'Joliet', state_id: '14', zip_code: '60435', phone_number: '815-658-8128', email: 'mflack1h@stumbleupon.com'},
+                 {last_name: 'Joslin', first_name: 'Michele', street_address: '04589 High Crossing Park', city: 'Phoenix', state_id: '3', zip_code: '85015', phone_number: '602-938-5218', email: 'mjoslin1i@ovh.net'},
+                 {last_name: 'Nann', first_name: 'Lucky', street_address: '58538 Sunnyside Junction', city: 'Houston', state_id: '44', zip_code: '77035', phone_number: '713-450-2363', email: 'lnann1j@yale.edu'},
+                 {last_name: 'Maffezzoli', first_name: 'Emmye', street_address: '6 Kim Place', city: 'Evansville', state_id: '15', zip_code: '47712', phone_number: '812-558-3552', email: 'emaffezzoli1k@1und1.de'},
+                 {last_name: 'Slegg', first_name: 'Melba', street_address: '01 Killdeer Circle', city: 'Staten Island', state_id: '33', zip_code: '10310', phone_number: '718-678-5790', email: 'mslegg1l@netvibes.com'},
+                 {last_name: 'Annear', first_name: 'Sayers', street_address: '02536 Miller Place', city: 'Winston Salem', state_id: '34', zip_code: '27105', phone_number: '336-148-1934', email: 'sannear1m@un.org'},
+                 {last_name: 'Deners', first_name: 'Raquel', street_address: '35180 Norway Maple Park', city: 'Sacramento', state_id: '5', zip_code: '94280', phone_number: '916-860-1594', email: 'rdeners1n@arstechnica.com'},
+                 {last_name: 'Fawthrop', first_name: 'Emory', street_address: '055 Cardinal Pass', city: 'Atlanta', state_id: '11', zip_code: '30301', phone_number: '678-523-8641', email: 'efawthrop1o@nyu.edu'},
+                 {last_name: 'Farnan', first_name: 'Reilly', street_address: '7853 Merchant Hill', city: 'New York City', state_id: '33', zip_code: '10090', phone_number: '212-130-3505', email: 'rfarnan1p@constantcontact.com'},
+                 {last_name: 'Perrat', first_name: 'Mycah', street_address: '672 Duke Alley', city: 'Alpharetta', state_id: '11', zip_code: '30022', phone_number: '770-720-7472', email: 'mperrat1q@nydailynews.com'},
+                 {last_name: 'Brydell', first_name: 'Dexter', street_address: '878 Sunfield Hill', city: 'Gary', state_id: '15', zip_code: '46406', phone_number: '219-436-6683', email: 'dbrydell1r@who.int'},
+                 {last_name: 'Rampley', first_name: 'Kissie', street_address: '8 Hollow Ridge Park', city: 'Washington', state_id: '9', zip_code: '20503', phone_number: '202-532-3787', email: 'krampley1s@umich.edu'},
+                 {last_name: 'Quirk', first_name: 'Quentin', street_address: '2 Oxford Drive', city: 'Washington', state_id: '9', zip_code: '20380', phone_number: '202-499-6768', email: 'qquirk1t@bbb.org'},
+                 {last_name: 'Holton', first_name: 'West', street_address: '25 Magdeline Park', city: 'Midland', state_id: '44', zip_code: '79710', phone_number: '432-832-4613', email: 'wholton1u@nifty.com'},
+                 {last_name: 'Shingfield', first_name: 'Laurent', street_address: '1 Sycamore Hill', city: 'Philadelphia', state_id: '39', zip_code: '19191', phone_number: '215-588-3408', email: 'lshingfield1v@ox.ac.uk'},
+                 {last_name: 'Godilington', first_name: 'Mischa', street_address: '0966 Paget Hill', city: 'Alexandria', state_id: '47', zip_code: '22313', phone_number: '571-708-1509', email: 'mgodilington1w@slashdot.org'},
+                 {last_name: 'Lorkin', first_name: 'Pavia', street_address: '01932 Mayer Point', city: 'Brea', state_id: '5', zip_code: '92822', phone_number: '714-539-3592', email: 'plorkin1x@businessweek.com'}])
