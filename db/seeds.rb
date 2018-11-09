@@ -1,11 +1,11 @@
 # Lookups
 Role.create([{ name: 'User', level:  1},
-                   { name: 'Sales Person', level: 2 },
-                   { name: 'Sales Manager', level: 3 },
-                   { name: 'Finance Manager', level:  4},
-                   { name: 'Inventory Manager', level:  5},
-                   { name: 'Dealership Owner', level:  6}
-                  ])
+             { name: 'Sales Person', level: 2 },
+             { name: 'Sales Manager', level: 3 },
+             { name: 'Finance Manager', level:  4},
+             { name: 'Inventory Manager', level:  5},
+             { name: 'Dealership Owner', level:  6}
+            ])
 
 Make.create( [{name: 'Acura'}, {name: 'Alfa Romeo'}, {name: 'Aptera'}, {name: 'Aston Martin'}, {name: 'Audi'}, {name: 'Austin'}, {name: 'Bentley'},
               {name: 'BMW'}, {name: 'Bugatti'}, {name: 'Buick'}, {name: 'Cadillac'}, {name: 'Chevrolet'}, {name: 'Chrysler'}, {name: 'Citroen'},
@@ -28,6 +28,14 @@ State.create([
                  { :state_name => 'New York', :state_abbr => 'NY'}, { :state_name => 'North Carolina', :state_abbr => 'NC'}, { :state_name => 'North Dakota', :state_abbr => 'ND'}, { :state_name => 'Ohio', :state_abbr => 'OH'}, { :state_name => 'Oklahoma', :state_abbr => 'OK'}, { :state_name => 'Oregon', :state_abbr => 'OR'},
                  { :state_name => 'Pennsylvania', :state_abbr => 'PA'}, { :state_name => 'Rhode Island', :state_abbr => 'RI'}, { :state_name => 'South Carolina', :state_abbr => 'SC'}, { :state_name => 'South Dakota', :state_abbr => 'SD'}, { :state_name => 'Tennessee', :state_abbr => 'TN'}, { :state_name => 'Texas', :state_abbr => 'TX'}, { :state_name => 'Utah', :state_abbr => 'UT'},
                  { :state_name => 'Vermont', :state_abbr => 'VT'}, { :state_name => 'Virginia', :state_abbr => 'VA'}, { :state_name => 'Washington', :state_abbr => 'WA'}, { :state_name => 'West Virginia', :state_abbr => 'WV'}, { :state_name => 'Wisconsin', :state_abbr => 'WI'}, { :state_name => 'Wyoming', :state_abbr => 'WY'}
+             ])
+Color.create([{name: 'Red'},
+              {name: 'Black'},
+              {name: 'Blue'},
+              {name: 'Green'},
+              {name: 'Brown'},
+              {name: 'Yellow'},
+              {name: 'Red'}
              ])
 #Sample Data
 User.create([{first_name: 'Johnny', last_name: 'Smith', email:'default@gmail.com', password: 'default', role_id: 6}])
