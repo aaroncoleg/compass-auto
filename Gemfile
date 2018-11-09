@@ -23,6 +23,7 @@ gem 'font-awesome-rails'
 gem 'devise'
 gem 'searchlight'
 gem 'will_paginate'
+gem "aws-sdk-s3", require: false
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
