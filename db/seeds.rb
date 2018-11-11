@@ -35,7 +35,7 @@ Color.create([{name: 'Red'},
               {name: 'Green'},
               {name: 'Brown'},
               {name: 'Yellow'},
-              {name: 'Red'}
+              {name: 'Silver'}
              ])
 #Sample Data
 User.create([{first_name: 'Johnny', last_name: 'Smith', email:'default@gmail.com', password: 'default', role_id: 6}])
