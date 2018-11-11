@@ -179,7 +179,8 @@ table {
     padding: 0;
     width: 85%;
     table-layout: fixed;
-    margin-top: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 table caption {

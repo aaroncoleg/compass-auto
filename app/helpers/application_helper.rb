@@ -11,4 +11,13 @@ module ApplicationHelper
       false
     end
   end
+
+  def equivalent_interest_rate(rate)
+    12*((1+rate/100/4.0)**(4.0/12)-1)
+  end
+
+  def due_calc(rate, years, price)
+    puts price
+    number_with_precision((rate * price)/ (12 * (1- (1+(rate/12))**(-12 * years)))*years*12, :precision => 2)
+  end
 end

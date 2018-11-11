@@ -6,7 +6,6 @@
   <%= form_tag customers_path, :id => "search_form", :method => 'get' do %>
     <%= text_field_tag :first_name_search, params[:first_name_search], :placeholder => "First Name" %>
   <%= text_field_tag :last_name_search, params[:last_name_search], :placeholder => "Last Name"  %>
-  <%= text_field_tag :email_search, params[:email_search], :placeholder => "Email"  %>
     <%= submit_tag "Search" %>
   <% end %>
 

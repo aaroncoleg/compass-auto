@@ -1,0 +1,41 @@
+<% quote = Quote.find(@quote_id) %>
+<% months = @years * 12 %>
+<% price = quote.price %>
+<% rate = equivalent_interest_rate(@interest) %>
+<% total = due_calc(rate, @years, quote.price).to_f %>
+<% due_monthly =  total / @years/ 12%>
+<% total_interest = total - price %>
+<br>
+<div style="margin:auto; width:600px;">
+  <div style="display:inline-block; margin-right:20px; vertical-align: middle; text-align:left;">
+    <h3 style="margin-bottom:5px">Total Due</h3> <%= number_to_currency(total) %>  <br><h3 style="margin-bottom:5px">Monthly Payment</h3> <%= number_to_currency(due_monthly) %>
+  </div>
+<div style="max-width:240px; display:inline-block; vertical-align: middle;">
+<%= pie_chart [["Principal", price], ["Interest", total_interest]], colors: ["#197512","#68c141"], legend: "bottom", donut: true, thousands: ",", prefix: "$"%>
+</div>
+</div>
+<br>
+<h2>Amortization Table</h2>
+<table>
+  <thead>
+  <tr>
+    <th>Month</th>
+    <th>Beginning Balance</th>
+    <th>Principal</th>
+    <th>Interest</th>
+    <th>Ending Balance</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% for i in 1..months do %>
+    <tr>
+      <td><%= i %></td>
+      <td><%= i %></td>
+      <td><%= i %></td>
+      <td><%= i %></td>
+      <td><%= i %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

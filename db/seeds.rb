@@ -40,6 +40,26 @@ Color.create([{name: 'Red'},
 #Sample Data
 User.create([{first_name: 'Johnny', last_name: 'Smith', email:'default@gmail.com', password: 'default', role_id: 6}])
 
+Inventory.create([{make_id: '72', model: 'Previa', year: '1993', miles: '94879', color_id: '6', price: '29017', vin: '1GNSCCE0XDR336998'},
+                  {make_id: '56', model: 'Cayman', year: '2008', miles: '73987', color_id: '3', price: '14995', vin: '1HGCR2E50EA154391'},
+                  {make_id: '50', model: 'Altima', year: '2003', miles: '69540', color_id: '3', price: '38495', vin: 'JN8AZ2NC2E9350701'},
+                  {make_id: '56', model: 'Cayenne', year: '2011', miles: '24099', color_id: '4', price: '28500', vin: '3GYFNBE33FS598980'},
+                  {make_id: '12', model: 'Camaro', year: '2001', miles: '101870', color_id: '2', price: '16995', vin: '1C4RDHAG1DC671638'},
+                  {make_id: '25', model: 'Expedition EL', year: '2011', miles: '9506', color_id: '1', price: '16888', vin: '1G1BE5SM3H7121107'},
+                  {make_id: '18', model: 'Dakota Club', year: '1996', miles: '46112', color_id: '5', price: '12772', vin: '1G11C5SA0GF157445'},
+                  {make_id: '12', model: 'Caprice', year: '1996', miles: '24674', color_id: '1', price: '20925', vin: '2C3CDXHG5GH332621'},
+                  {make_id: '25', model: 'E-Series', year: '1987', miles: '10310', color_id: '6', price: '31799', vin: '1C4BJWDG9GL345858'},
+                  {make_id: '14', model: '2CV', year: '1948', miles: '22696', color_id: '2', price: '43998', vin: '5TFAW5F1XHX585091'},
+                  {make_id: '72', model: 'Tacoma', year: '2006', miles: '20808', color_id: '1', price: '27400', vin: 'JN1BY1ARXDM600515'},
+                  {make_id: '10', model: 'Riviera', year: '1991', miles: '17773', color_id: '6', price: '12599', vin: '1C3CDFBA5DD343951'},
+                  {make_id: '10', model: 'Regal', year: '1996', miles: '141771', color_id: '1', price: '13990', vin: '1GNFK16388J114000'},
+                  {make_id: '73', model: 'Touareg', year: '2010', miles: '79690', color_id: '2', price: '10575', vin: '1G6KD57Y67U217404'},
+                  {make_id: '4', model: 'DBS', year: '2011', miles: '76803', color_id: '4', price: '10125', vin: '1FMCU0GXXDUA80440'},
+                  {make_id: '74', model: 'S40', year: '2006', miles: '14019', color_id: '4', price: '28219', vin: '1GKKNSLA7HZ221049'},
+                  {make_id: '27', model: 'Sierra 1500', year: '2000', miles: '29679', color_id: '6', price: '37999', vin: '3GCUKREC3FG235466'},
+                  {make_id: '38', model: 'LR3', year: '2005', miles: '116337', color_id: '2', price: '7890', vin: '1D8HN44E99B502963'},
+                  {make_id: '11', model: 'DeVille', year: '1996', miles: '112645', color_id: '3', price: '6988', vin: '1D7HE22K66S710604'}])
+
 Customer.create([{last_name: 'Brocket', first_name: 'Rudy', street_address: '784 Westridge Court', city: 'Greensboro', state_id: '34', zip_code: '27425', phone_number: '336-553-0024', email: 'rbrocket0@angelfire.com'},
                  {last_name: 'Sturch', first_name: 'Ellie', street_address: '852 Sutteridge Way', city: 'Phoenix', state_id: '3', zip_code: '85083', phone_number: '602-284-5965', email: 'esturch1@smh.com.au'},
                  {last_name: 'Shoebotham', first_name: 'Emmanuel', street_address: '9 Summerview Center', city: 'Colorado Springs', state_id: '6', zip_code: '80945', phone_number: '719-802-4944', email: 'eshoebotham2@mail.ru'},
@@ -110,3 +130,8 @@ Customer.create([{last_name: 'Brocket', first_name: 'Rudy', street_address: '784
                  {last_name: 'Shingfield', first_name: 'Laurent', street_address: '1 Sycamore Hill', city: 'Philadelphia', state_id: '39', zip_code: '19191', phone_number: '215-588-3408', email: 'lshingfield1v@ox.ac.uk'},
                  {last_name: 'Godilington', first_name: 'Mischa', street_address: '0966 Paget Hill', city: 'Alexandria', state_id: '47', zip_code: '22313', phone_number: '571-708-1509', email: 'mgodilington1w@slashdot.org'},
                  {last_name: 'Lorkin', first_name: 'Pavia', street_address: '01932 Mayer Point', city: 'Brea', state_id: '5', zip_code: '92822', phone_number: '714-539-3592', email: 'plorkin1x@businessweek.com'}])
+
+Quote.create([
+                 {price: 31396.39, customer_id: 1, inventory_id: 1},
+                 {price: 16224.59, customer_id: 2, inventory_id: 2}
+             ])

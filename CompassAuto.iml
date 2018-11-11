@@ -47,6 +47,7 @@
     <orderEntry type="library" scope="PROVIDED" name="bundler (v1.16.4, ruby-2.4.4-p296) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="byebug (v10.0.2, ruby-2.4.4-p296) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="capybara (v3.9.0, ruby-2.4.4-p296) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="chartkick (v3.0.1, ruby-2.4.4-p296) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="childprocess (v0.9.0, ruby-2.4.4-p296) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-rails (v4.2.2, ruby-2.4.4-p296) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-script (v2.4.1, ruby-2.4.4-p296) [gem]" level="application" />
