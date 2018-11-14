@@ -17,7 +17,6 @@ module ApplicationHelper
   end
 
   def due_calc(rate, years, price)
-    puts price
     number_with_precision((rate * price)/ (12 * (1- (1+(rate/12))**(-12 * years)))*years*12, :precision => 2)
   end
 end

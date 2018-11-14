@@ -8,7 +8,7 @@
 <br>
 <div style="margin:auto; width:600px;">
   <div style="display:inline-block; margin-right:20px; vertical-align: middle; text-align:left;">
-    <h3 style="margin-bottom:5px">Total Interest</h3> <%= number_to_currency(total_interest) %> <h3 style="margin-bottom:5px">Total Due</h3> <%= number_to_currency(total) %>  <br><h3 style="margin-bottom:5px">Monthly Payment</h3> <%= number_to_currency(due_monthly) %>
+    <h3 style="margin-bottom:5px">Total Due</h3> <%= number_to_currency(total) %>  <br><h3 style="margin-bottom:5px">Monthly Payment</h3> <%= number_to_currency(due_monthly) %>
   </div>
 <div style="max-width:240px; display:inline-block; vertical-align: middle;">
 <%= pie_chart [["Principal", price], ["Interest", total_interest]], colors: ["#197512","#68c141"], legend: "bottom", donut: true, thousands: ",", prefix: "$"%>
