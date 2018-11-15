@@ -16,11 +16,11 @@ class InventoriesTest < ApplicationSystemTestCase
 
     fill_in "Color", with: @inventory.color_id
     fill_in "Make", with: @inventory.make_id
-    fill_in "Miles", with: @inventory.miles
-    fill_in "Model", with: @inventory.model
-    fill_in "Price", with: @inventory.price
+    fill_in "Mileage", with: @inventory.mileage
+    fill_in "Model", with: @inventory.model_id
     fill_in "Sold", with: @inventory.sold
     fill_in "Vin", with: @inventory.vin
+    fill_in "Wholesale Price", with: @inventory.wholesale_price
     fill_in "Year", with: @inventory.year
     click_on "Create Inventory"
 
@@ -34,11 +34,11 @@ class InventoriesTest < ApplicationSystemTestCase
 
     fill_in "Color", with: @inventory.color_id
     fill_in "Make", with: @inventory.make_id
-    fill_in "Miles", with: @inventory.miles
-    fill_in "Model", with: @inventory.model
-    fill_in "Price", with: @inventory.price
+    fill_in "Mileage", with: @inventory.mileage
+    fill_in "Model", with: @inventory.model_id
     fill_in "Sold", with: @inventory.sold
     fill_in "Vin", with: @inventory.vin
+    fill_in "Wholesale Price", with: @inventory.wholesale_price
     fill_in "Year", with: @inventory.year
     click_on "Update Inventory"
 

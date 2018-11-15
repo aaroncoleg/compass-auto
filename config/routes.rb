@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
+  resources :inventories
+  resources :models
   resources :quotes
   resources :roles
   resources :colors
       resources :customers
-  resources :inventories
   resources :makes
   resources :states
 
