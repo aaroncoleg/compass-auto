@@ -1,8 +1,8 @@
 <% quote = Quote.find(@quote_id) %>
 <% months = @years * 12 %>
 <% price = quote.price %>
-<% rate = equivalent_interest_rate(@interest) %>
-<% total = due_calc(rate, @years, quote.price).to_f %>
+<% rate = Quote.equivalent_interest_rate(@interest) %>
+<% total = number_with_precision(Quote.due_calc(rate, @years, quote.price), :precision => 2).to_f %>
 <% due_monthly =  total / @years/ 12%>
 <% total_interest = total - price %>
 <br>

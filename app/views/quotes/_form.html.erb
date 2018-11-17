@@ -13,22 +13,12 @@
 
   <div class="field">
     <%= form.label :customer_id %>
-    <%= form.text_field :customer_id %>
+    <%= form.collection_select  :customer_id, Customer.all, :id, :full_name, :include_blank => true%>
   </div>
 
   <div class="field">
     <%= form.label :inventory_id %>
-    <%= form.text_field :inventory_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :price %>
-    <%= form.text_field :price %>
-  </div>
-
-  <div class="field">
-    <%= form.label :sold %>
-    <%= form.check_box :sold %>
+    <%= form.collection_select  :inventory_id, Inventory.where("sold = false").order(:vin), :id, :vin, :include_blank => true%>
   </div>
 
   <div class="actions">
