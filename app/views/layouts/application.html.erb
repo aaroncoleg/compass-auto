@@ -17,7 +17,7 @@
         <%= link_to image_tag("compassLogo.png", style: 'height:30px;width:auto;'), root_path, class:"logo"%>
       </li>
       <li>
-        <%= link_to 'Sales', root_path, :class => current_class?(user_session_path)%>
+        <%= link_to 'Sales', quotes_path, :class => current_class?(user_session_path)%>
       </li>
       <li>
         <%= link_to 'Inventory', root_path, :class => current_class?(user_session_path)%>
