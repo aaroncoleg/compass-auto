@@ -1,18 +1,33 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Miles:</strong>
-  <%= @inventory.miles %>
-</p>
-
-<p>
   <strong>Year:</strong>
   <%= @inventory.year %>
 </p>
 
 <p>
+  <strong>Make:</strong>
+  <%= @inventory.make %>
+</p>
+
+<p>
   <strong>Model:</strong>
   <%= @inventory.model %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @inventory.color %>
+</p>
+
+<p>
+  <strong>Mileage:</strong>
+  <%= @inventory.mileage %>
+</p>
+
+<p>
+  <strong>Wholesale price:</strong>
+  <%= @inventory.wholesale_price %>
 </p>
 
 <p>
@@ -23,21 +38,6 @@
 <p>
   <strong>Sold:</strong>
   <%= @inventory.sold %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @inventory.price %>
-</p>
-
-<p>
-  <strong>Color:</strong>
-  <%= @inventory.color %>
-</p>
-
-<p>
-  <strong>Make:</strong>
-  <%= @inventory.make %>
 </p>
 
 <%= link_to 'Edit', edit_inventory_path(@inventory) %> |

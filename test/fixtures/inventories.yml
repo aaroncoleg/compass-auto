@@ -1,21 +1,21 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  miles: 1
   year: 1
-  model: MyString
-  vin: 1
-  sold: false
-  price: 9.99
-  color: one
   make: one
+  model: one
+  color: one
+  mileage: 1
+  wholesale_price: 9.99
+  vin: MyString
+  sold: false
 
 two:
-  miles: 1
   year: 1
-  model: MyString
-  vin: 1
-  sold: false
-  price: 9.99
-  color: two
   make: two
+  model: two
+  color: two
+  mileage: 1
+  wholesale_price: 9.99
+  vin: MyString
+  sold: false

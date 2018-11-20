@@ -12,33 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :miles %>
-    <%= form.number_field :miles %>
-  </div>
-
-  <div class="field">
     <%= form.label :year %>
     <%= form.number_field :year %>
   </div>
 
   <div class="field">
-    <%= form.label :model %>
-    <%= form.text_field :model %>
+    <%= form.label :make_id %>
+    <%= form.text_field :make_id %>
   </div>
 
   <div class="field">
-    <%= form.label :vin %>
-    <%= form.number_field :vin %>
-  </div>
-
-  <div class="field">
-    <%= form.label :sold %>
-    <%= form.check_box :sold %>
-  </div>
-
-  <div class="field">
-    <%= form.label :price %>
-    <%= form.text_field :price %>
+    <%= form.label :model_id %>
+    <%= form.text_field :model_id %>
   </div>
 
   <div class="field">
@@ -47,8 +32,28 @@
   </div>
 
   <div class="field">
-    <%= form.label :make_id %>
-    <%= form.text_field :make_id %>
+    <%= form.label :mileage %>
+    <%= form.number_field :mileage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :wholesale_price %>
+    <%= form.text_field :wholesale_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :vin %>
+    <%= form.text_field :vin %>
+  </div>
+
+  <div class="field">
+    <%= form.label :photo %>
+    <%= form.file_field :photo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sold %>
+    <%= form.check_box :sold %>
   </div>
 
   <div class="actions">

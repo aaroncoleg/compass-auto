@@ -1,2 +1,2 @@
-json.extract! inventory, :id, :miles, :year, :model, :vin, :sold, :price, :color_id, :make_id, :created_at, :updated_at
+json.extract! inventory, :id, :year, :make_id, :model_id, :color_id, :mileage, :wholesale_price, :vin, :sold, :created_at, :updated_at
 json.url inventory_url(inventory, format: :json)
