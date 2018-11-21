@@ -5,4 +5,9 @@ class Inventory < ApplicationRecord
 
   has_one_attached :photo
 
+  validates :vin,
+            presence: true,
+            length: {maximum: 17},
+            on: :create,
+            allow_nil: false
 end

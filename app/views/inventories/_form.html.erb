@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= form.label :make_id %>
-    <%= form.collection_select :make_id, Make.order(:name), :id, :name, include_blank: true, required: true %>
+    <%= form.collection_select :make_id, Make.order(:name), :id, :name, include_blank: true %>
   </div>
 
   <div class="field">
@@ -28,7 +28,7 @@
 
   <div class="field">
     <%= form.label :color_id %>
-    <%= form.collection_select :color_id, Color.order(:name), :id, :name, include_blank: true %>
+    <%= form.collection_select :color_id, Color.order(:name), :id, :name, include_blank: true, required: true%>
   </div>
 
   <div class="field">
@@ -43,7 +43,7 @@
 
   <div class="field">
     <%= form.label :vin %>
-    <%= form.text_field :vin %>
+    <%= form.text_field :vin, maxlength: 17, size: 30%>
   </div>
 
   <div class="field">
