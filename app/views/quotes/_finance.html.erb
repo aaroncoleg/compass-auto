@@ -1,6 +1,6 @@
 <% quote = Quote.find(@quote_id) %>
 <% months = @years * 12 %>
-<% price = quote.price.to_f %>
+<% price = quote.price %>
 <% rate = Quote.equivalent_interest_rate(@interest) %>
 <% total = number_with_precision(Quote.due_calc(rate, @years, quote.price).to_f, :precision => 2).to_f %>
 <% due_monthly =  total  / @years/ 12%>
@@ -11,7 +11,7 @@
     <h3 style="margin-bottom:5px">Total Due</h3> <%= number_to_currency(total) %>  <br><h3 style="margin-bottom:5px">Monthly Payment</h3> <%= number_to_currency(due_monthly) %>
   </div>
 <div style="max-width:240px; display:inline-block; vertical-align: middle;">
-<%= pie_chart [["Principal", price], ["Interest", total_interest]], colors: ["#197512","#68c141"], legend: "bottom", donut: true, thousands: ",", prefix: "$"%>
+<%= pie_chart [["Principal", number_with_precision(price, precision: 2)], ["Interest", number_with_precision(total_interest, precision: 2)]], colors: ["#197512","#68c141"], legend: "bottom", donut: true, thousands: ",", prefix: "$"%>
 </div>
 </div>
 <br>

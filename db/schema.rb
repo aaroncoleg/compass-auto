@@ -59,7 +59,7 @@ ActiveRecord::Schema.define(version: 2018_11_15_032039) do
     t.integer "model_id"
     t.integer "color_id"
     t.integer "mileage"
-    t.decimal "wholesale_price", precision: 8, scale: 2
+    t.decimal "wholesale_price", precision: 10, scale: 2
     t.string "vin"
     t.boolean "sold"
     t.datetime "created_at", null: false
@@ -86,7 +86,7 @@ ActiveRecord::Schema.define(version: 2018_11_15_032039) do
   create_table "quotes", force: :cascade do |t|
     t.integer "customer_id"
     t.integer "inventory_id"
-    t.decimal "price"
+    t.decimal "price", precision: 10, scale: 2
     t.boolean "sold"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

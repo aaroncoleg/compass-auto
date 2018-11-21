@@ -39,7 +39,7 @@ namespace :load_inventory do
       model = Model.where(:make_id => make).order("RANDOM()").first.id
 
       Inventory.create(make_id: make, model_id: model, mileage: Faker::Vehicle.mileage,
-                       vin: Faker::Vehicle.vin, color_id: Color.all.order("RANDOM()").first.id, wholesale_price: rand(1..30) * 500+ 10000, year: Faker::Vehicle.year,
+                       vin: Faker::Vehicle.vin, color_id: Color.all.order("RANDOM()").first.id, wholesale_price: "%.2f" % (rand(1..30) * 500+ 10000), year: Faker::Vehicle.year,
                        sold: false)
     end
 

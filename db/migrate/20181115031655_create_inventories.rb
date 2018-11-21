@@ -6,7 +6,7 @@ class CreateInventories < ActiveRecord::Migration[5.2]
       t.references :model, foreign_key: true
       t.references :color, foreign_key: true
       t.integer :mileage
-      t.decimal :wholesale_price, :precision => 8, :scale => 2
+      t.decimal :wholesale_price, precision: 10, scale: 2
       t.string :vin
       t.boolean :sold
 

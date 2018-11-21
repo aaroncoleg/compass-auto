@@ -30,7 +30,7 @@ State.create([
              ])
 
 # Make and Model
-20.times do
+40.times do
 make_and_model = Faker::Vehicle.unique.make_and_model
 make_name = make_and_model.split(' ').first
 model_name = make_and_model.split(' ').second
