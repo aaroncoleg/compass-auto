@@ -13,4 +13,26 @@ class Quote < ApplicationRecord
   def get_tax
     price * 0.043
   end
+
+  def self.total_sales
+    Quote.sum(:price, :conditions => {:sold => true})
+  end
+
+  def self.total_sales_tax
+    total_sales * 0.0625
+  end
+
+  def self.whole_sale_total
+    Inventory.sum(:whole_sale_price)
+  end
+
+  def self.total_interest
+    number_with_precision(Quote.due_calc(rate, @years, quote.price).to_f, :precision => 2).to_f - Quote.price.to_f
+  end
+
+  def self.net_profit_margin
+    total_sales_tax
+
+
+
 end

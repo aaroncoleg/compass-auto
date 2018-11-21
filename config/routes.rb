@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: 'pages#home'
   match '/account' => 'pages#account', :via => [:get], :as => 'account_show'
+  match '/dealership' => 'pages#dealership', :via => [:get], :as => 'dealership_show'
   match '/users' => 'pages#users', :via => [:get], :as => 'users_show'
   match '/quotes/:id/finance'=> 'quotes#finance', :via => [:get], :as => 'finance_show'
   get '/auth/:provider/callback', to: 'sessions#create'
