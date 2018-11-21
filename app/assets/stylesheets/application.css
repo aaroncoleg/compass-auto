@@ -6,10 +6,10 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 
 body {
-    background: #d6dad9;
+    background: black;
     text-align: center;
     font-family: roboto;
-
+    overflow: auto;
 }
 .nav {
 
@@ -249,6 +249,26 @@ a:link,a:visited,a:active
         border-bottom: 0;
     }
 
+}
 
+
+
+
+.footer {
+
+    background: black;
+    height: 100px;
+    max-width: 100%;
+    margin: auto;
 
 }
+
+.slideShow > div:not(.showImg) {
+    display: none;
+}
+
+.showImg {
+    display: block;
+
+}
+

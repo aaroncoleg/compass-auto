@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :quotes
   resources :roles
   resources :colors
-      resources :customers
+  resources :customers
   resources :inventories
   resources :makes
   resources :states
