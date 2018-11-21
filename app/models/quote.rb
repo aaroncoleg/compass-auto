@@ -32,6 +32,7 @@ class Quote < ApplicationRecord
 
   def self.net_profit_margin
     total_sales_tax
+    end
 
 
 
