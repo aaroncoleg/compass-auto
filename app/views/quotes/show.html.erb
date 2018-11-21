@@ -2,23 +2,32 @@
 
 <p>
   <strong>Customer:</strong>
-  <%= @quote.customer %>
+  <%= @quote.customer.full_name %>
 </p>
-
 <p>
-  <strong>Inventory:</strong>
-  <%= @quote.inventory %>
+  <strong>Vehicle:</strong>
+  <%= link_to @quote.inventory.year.to_s + " "+ @quote.inventory.make.name + " " + @quote.inventory.model.name, @quote.inventory %>
 </p>
-
 <p>
   <strong>Price:</strong>
-  <%= @quote.price %>
+  <%= number_to_currency(@quote.price) %>
 </p>
 
 <p>
-  <strong>Sold:</strong>
-  <%= @quote.sold %>
+
+  <% if @quote.sold %>
+    <strong style="color:green">Sold</strong>
+    <% end %>
+
 </p>
-<%= link_to 'Finance Breakdown', finance_show_path %>
-<%= link_to 'Edit', edit_quote_path(@quote) %> |
-<%= link_to 'Back', quotes_path %>
+<br>
+<%= link_to 'Finance Breakdown', finance_show_path, {:style=>'margin-right: 1em;'} %>
+<%= link_to 'Export PDF', finance_show_path, {:style=>'margin-right: 1em;'} %>
+<% if @quote.sold %>
+  <%= link_to 'Undo Sale', {:controller => :quotes,
+                               :action => 'undo_sale', :id => @quote.id},  :method => :post, :style => 'margin-right: 1em;' %>
+<% else %>
+  <%= link_to 'Mark as Sold', {:controller => :quotes,
+                             :action => 'mark_sold', :id => @quote.id},  :method => :post, :style => 'margin-right: 1em;' %>
+  <% end %>
+<%= link_to 'Back', quotes_path, {:style=>'margin-right: 1em;'} %>

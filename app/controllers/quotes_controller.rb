@@ -4,7 +4,15 @@ class QuotesController < ApplicationController
   # GET /quotes
   # GET /quotes.json
   def index
-    @quotes = Quote.all
+
+    if(params.empty?)
+      @quotes = Quote.all
+    else
+    customers =Customer.where(["first_name LIKE ?","%#{params[:first_name_search]}%"]).where(["last_name LIKE ?","%#{params[:last_name_search]}%"])
+    inventories = Inventory.where(["vin LIKE ?","%#{params[:vin_search]}%"])
+    @quotes = Quote.where(customer_id: customers.pluck(:id))
+    @quotes = @quotes.where(inventory_id: inventories.pluck(:id))
+      end
   end
 
   # GET /quotes/1
@@ -27,7 +35,6 @@ class QuotesController < ApplicationController
     @quote = Quote.new(quote_params)
     inv = Inventory.find(@quote.inventory_id)
     p = inv.wholesale_price * 0.043 + inv.wholesale_price
-    puts "%.2f" % (p)
     @quote.price = "%.2f" % (p)
     @quote.sold = false
 
@@ -47,6 +54,10 @@ class QuotesController < ApplicationController
   def update
     respond_to do |format|
       if @quote.update(quote_params)
+        inv = Inventory.find(@quote.inventory_id)
+        p = inv.wholesale_price * 0.043 + inv.wholesale_price
+        @quote.price = "%.2f" % (p)
+        @quote.save
         format.html { redirect_to @quote, notice: 'Quote was successfully updated.' }
         format.json { render :show, status: :ok, location: @quote }
       else
@@ -74,6 +85,38 @@ class QuotesController < ApplicationController
       format.js
     end
   end
+
+  def mark_sold
+    q = Quote.find(params[:id])
+    inv = q.inventory
+    q.sold = true
+    inv.sold = true
+    q.save
+    inv.save
+    redirect_to q
+  end
+
+  def undo_sale
+    q = Quote.find(params[:id])
+    inv = q.inventory
+    q.sold = false
+    inv.sold = false
+    q.save
+    inv.save
+    redirect_to q
+  end
+
+  def sold_quotes
+    if(params.empty?)
+      @quotes = Quote.all
+    else
+      customers =Customer.where(["first_name LIKE ?","%#{params[:first_name_search]}%"]).where(["last_name LIKE ?","%#{params[:last_name_search]}%"])
+      inventories = Inventory.where(["vin LIKE ?","%#{params[:vin_search]}%"])
+      @quotes = Quote.where(customer_id: customers.pluck(:id))
+      @quotes = @quotes.where(inventory_id: inventories.pluck(:id))
+    end
+  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

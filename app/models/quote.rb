@@ -10,8 +10,8 @@ class Quote < ApplicationRecord
     rate * price/ (12 * (1- (1+(rate/12))**(-12 * years)))*years*12
   end
 
-  def get_tax
-    price * 0.043
+  def price_with_tax
+    price * 0.043 + price
   end
 
   def self.total_sales

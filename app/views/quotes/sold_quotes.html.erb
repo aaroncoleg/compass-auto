@@ -1,15 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 
-<h1>Quotes</h1>
-
-<%= form_tag quotes_path, :id => "search_form", :method => 'get' do %>
+<h1>Sold</h1>
+<%= form_tag sold_quotes_path, :id => "search_form", :method => 'get' do %>
   <%= text_field_tag :first_name_search, params[:first_name_search], :placeholder => "First Name" %>
   <%= text_field_tag :last_name_search, params[:last_name_search], :placeholder => "Last Name"  %>
   <%= text_field_tag :vin_search, params[:vin_search], :placeholder => "VIN"  %>
   <%= submit_tag "Search" %>
 <% end %>
-
 <table>
   <thead>
   <tr>
@@ -22,7 +20,7 @@
   </thead>
 
   <tbody>
-  <% @quotes.where(:sold => false).each do |quote| %>
+  <% @quotes.where(:sold => true).each do |quote| %>
     <tr>
       <td><%= quote.customer.full_name %></td>
       <td><%= quote.inventory.year.to_s + " "+ quote.inventory.make.name + " " + quote.inventory.model.name %></td>
@@ -35,6 +33,8 @@
 </table>
 
 <br>
+<div>
+<%= link_to 'New Quote', new_quote_path, {:style=>'margin-right: 1em;'} %>
 
-<%= link_to 'New Quote', new_quote_path, {:style=>'margin-right: 1em;'}  %>
-<%= link_to 'Show Sold', sold_quotes_path %>
+<%= link_to 'Show Unsold', quotes_path %>
+</div>
