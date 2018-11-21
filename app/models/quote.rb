@@ -19,11 +19,11 @@ class Quote < ApplicationRecord
   end
 
   def self.total_sales_tax
-    total_sales * 0.0625
+    total_sales * 0.043
   end
 
   def self.whole_sale_total
-    Inventory.sum(:whole_sale_price)
+    Inventory.sum(:whole_sale_price, :conditions => {:sold => true})
   end
 
   def self.total_interest
