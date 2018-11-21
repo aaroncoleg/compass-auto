@@ -25,6 +25,8 @@ class QuotesController < ApplicationController
   # POST /quotes.json
   def create
     @quote = Quote.new(quote_params)
+    inv = Inventory.find(@quote.inventory_id)
+    @quote.price = inv.wholesale_price * 0.043 + inv.wholesale_price
 
     respond_to do |format|
       if @quote.save

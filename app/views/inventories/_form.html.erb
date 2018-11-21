@@ -51,10 +51,7 @@
     <%= form.file_field :photo %>
   </div>
 
-  <div class="field">
-    <%= form.label :sold %>
-    <%= form.check_box :sold %>
-  </div>
+  <%= form.hidden_field :sold , :value => false%>
 
   <div class="actions">
     <%= form.submit %>
