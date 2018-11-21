@@ -19,6 +19,6 @@
   <strong>Sold:</strong>
   <%= @quote.sold %>
 </p>
-
+<%= link_to 'Finance Breakdown', finance_show_path %>
 <%= link_to 'Edit', edit_quote_path(@quote) %> |
 <%= link_to 'Back', quotes_path %>
