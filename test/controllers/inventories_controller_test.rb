@@ -17,7 +17,7 @@ class InventoriesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create inventory" do
     assert_difference('Inventory.count') do
-      post inventories_url, params: { inventory: { color_id: @inventory.color_id, make_id: @inventory.make_id, miles: @inventory.miles, model: @inventory.model, price: @inventory.price, sold: @inventory.sold, vin: @inventory.vin, year: @inventory.year } }
+      post inventories_url, params: { inventory: { color_id: @inventory.color_id, make_id: @inventory.make_id, mileage: @inventory.mileage, model_id: @inventory.model_id, sold: @inventory.sold, vin: @inventory.vin, wholesale_price: @inventory.wholesale_price, year: @inventory.year } }
     end
 
     assert_redirected_to inventory_url(Inventory.last)
@@ -34,7 +34,7 @@ class InventoriesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update inventory" do
-    patch inventory_url(@inventory), params: { inventory: { color_id: @inventory.color_id, make_id: @inventory.make_id, miles: @inventory.miles, model: @inventory.model, price: @inventory.price, sold: @inventory.sold, vin: @inventory.vin, year: @inventory.year } }
+    patch inventory_url(@inventory), params: { inventory: { color_id: @inventory.color_id, make_id: @inventory.make_id, mileage: @inventory.mileage, model_id: @inventory.model_id, sold: @inventory.sold, vin: @inventory.vin, wholesale_price: @inventory.wholesale_price, year: @inventory.year } }
     assert_redirected_to inventory_url(@inventory)
   end
 

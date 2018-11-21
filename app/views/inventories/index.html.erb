@@ -2,17 +2,19 @@
 
 <h1>Inventories</h1>
 
+<%= link_to 'New Inventory', new_inventory_path %>
+
 <table>
   <thead>
     <tr>
-      <th>Miles</th>
       <th>Year</th>
+      <th>Make</th>
       <th>Model</th>
+      <th>Color</th>
+      <th>Mileage</th>
+      <th>Wholesale price</th>
       <th>Vin</th>
       <th>Sold</th>
-      <th>Price</th>
-      <th>Color</th>
-      <th>Make</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,14 +22,14 @@
   <tbody>
     <% @inventories.each do |inventory| %>
       <tr>
-        <td><%= inventory.miles %></td>
         <td><%= inventory.year %></td>
+        <td><%= inventory.make %></td>
         <td><%= inventory.model %></td>
+        <td><%= inventory.color %></td>
+        <td><%= inventory.mileage %></td>
+        <td><%= inventory.wholesale_price %></td>
         <td><%= inventory.vin %></td>
         <td><%= inventory.sold %></td>
-        <td><%= inventory.price %></td>
-        <td><%= inventory.color %></td>
-        <td><%= inventory.make %></td>
         <td><%= link_to 'Show', inventory %></td>
         <td><%= link_to 'Edit', edit_inventory_path(inventory) %></td>
         <td><%= link_to 'Destroy', inventory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -38,4 +40,4 @@
 
 <br>
 
-<%= link_to 'New Inventory', new_inventory_path %>
+

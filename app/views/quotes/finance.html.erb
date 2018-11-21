@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<% @quote = Quote.find(params[:id]) %>
+
+<h2>Financing</h2>
+
+
+<%= form_tag(fetch_finance_path(), method: "get", :remote => true) do |f| %>
+  <div class="field">
+    <%= label_tag 'years', 'Years' %>
+    <%= select_tag "years", options_for_select(3..5, 3) %>
+  </div>
+  <div class="field">
+    <%= label_tag 'interest', 'Interest Rate' %>
+    <%= text_field_tag :interest, "", required: true %>
+  </div>
+
+  <%= hidden_field_tag "quote_id", @quote.id %>
+  <%= submit_tag "Calculate" %>
+<% end %>
+
+<div id="top">
+
+</div>
+
+<div id="finance-results">
+
+
+</div>

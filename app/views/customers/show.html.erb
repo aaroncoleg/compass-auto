@@ -1,33 +1,13 @@
 <p id="notice"><%= notice %></p>
-
+<div class="pane2" style="width:80%; margin-left: auto;margin-right: auto; text-align: left; padding-left: 50px;">
 <p>
-  <strong>Last name:</strong>
-  <%= @customer.last_name %>
+  <strong>Name:</strong>
+  <%=  @customer.first_name + " " + @customer.last_name%>
 </p>
 
 <p>
-  <strong>First name:</strong>
-  <%= @customer.first_name %>
-</p>
-
-<p>
-  <strong>Street address:</strong>
-  <%= @customer.street_address %>
-</p>
-
-<p>
-  <strong>City:</strong>
-  <%= @customer.city %>
-</p>
-
-<p>
-  <strong>State:</strong>
-  <%= @customer.state %>
-</p>
-
-<p>
-  <strong>Zip code:</strong>
-  <%= @customer.zip_code %>
+  <strong>Address:</strong>
+  <%= @customer.street_address + ", " + @customer.city + ", " + @customer.state.state_name + " " + @customer.zip_code %>
 </p>
 
 <p>
@@ -40,5 +20,7 @@
   <%= @customer.email %>
 </p>
 
+</div>
 <%= link_to 'Edit', edit_customer_path(@customer) %> |
 <%= link_to 'Back', customers_path %>
+
