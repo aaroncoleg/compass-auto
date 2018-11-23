@@ -14,6 +14,11 @@ class Quote < ApplicationRecord
     price * 0.043 + price
   end
 
+  def self.calc_price(inv_id)
+    inv = Inventory.find(inv_id)
+    inv.wholesale_price * 0.082 + inv.wholesale_price
+  end
+  
   def self.total_sales
     Quote.sum(:price, :conditions => {:sold => true})
   end

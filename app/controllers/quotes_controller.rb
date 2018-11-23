@@ -34,7 +34,7 @@ class QuotesController < ApplicationController
   def create
     @quote = Quote.new(quote_params)
     inv = Inventory.find(@quote.inventory_id)
-    p = inv.wholesale_price * 0.082 + inv.wholesale_price
+    p = Quote.calc_price(inv.id)
     @quote.price = "%.2f" % (p)
     @quote.sold = false
 
