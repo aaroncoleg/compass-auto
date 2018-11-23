@@ -2,8 +2,8 @@
 
 one:
   make: one
-  model_name: MyString
+  name: MyString
 
 two:
   make: two
-  model_name: MyString
+  name: MyString

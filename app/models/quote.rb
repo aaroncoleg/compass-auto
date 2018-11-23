@@ -3,11 +3,11 @@ class Quote < ApplicationRecord
   belongs_to :inventory
 
   def self.equivalent_interest_rate(rate)
-    12*((1+rate/100/4.0)**(4.0/12)-1)
+    12*((1+rate/100/4.0)**(4/12.0)-1.0)
   end
 
   def self.due_calc(rate, years, price)
-    rate * price/ (12 * (1- (1+(rate/12))**(-12 * years)))*years*12
+    rate * price/ (12 * (1 - (1+(rate/12))**(-12 * years)))*years*12
   end
 
   def price_with_tax
@@ -18,7 +18,7 @@ class Quote < ApplicationRecord
     inv = Inventory.find(inv_id)
     inv.wholesale_price * 0.082 + inv.wholesale_price
   end
-  
+
   def self.total_sales
     Quote.sum(:price, :conditions => {:sold => true})
   end
