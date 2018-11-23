@@ -34,7 +34,7 @@ class QuotesController < ApplicationController
   def create
     @quote = Quote.new(quote_params)
     inv = Inventory.find(@quote.inventory_id)
-    p = inv.wholesale_price * 0.043 + inv.wholesale_price
+    p = inv.wholesale_price * 0.082 + inv.wholesale_price
     @quote.price = "%.2f" % (p)
     @quote.sold = false
 
@@ -89,10 +89,14 @@ class QuotesController < ApplicationController
   def mark_sold
     q = Quote.find(params[:id])
     inv = q.inventory
-    q.sold = true
-    inv.sold = true
-    q.save
-    inv.save
+    if inv.sold
+      flash[:notice] = 'This vehicle has already been sold.'
+    else
+      q.sold = true
+      inv.sold = true
+      q.save
+      inv.save
+    end
     redirect_to q
   end
 
