@@ -7,17 +7,17 @@
 
 <p>
   <strong>Make:</strong>
-  <%= @inventory.make %>
+  <%= @inventory.make.name %>
 </p>
 
 <p>
   <strong>Model:</strong>
-  <%= @inventory.model %>
+  <%= @inventory.model.name %>
 </p>
 
 <p>
   <strong>Color:</strong>
-  <%= @inventory.color %>
+  <%= @inventory.color.name %>
 </p>
 
 <p>
@@ -27,7 +27,7 @@
 
 <p>
   <strong>Wholesale price:</strong>
-  <%= @inventory.wholesale_price %>
+  <%= number_to_currency(@inventory.wholesale_price) %>
 </p>
 
 <p>

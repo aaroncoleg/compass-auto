@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= form.label :make_id %>
-    <%= form.text_field :make_id %>
+    <%= form.collection_select :make_id, Make.order(:name), :id, :name, include_blank: true %>
   </div>
 
   <div class="field">
