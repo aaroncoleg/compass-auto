@@ -13,3 +13,4 @@ jQuery ->
     else
       $('#inventory_model_id').empty()
       $('#inventory_model_id').parent().hide()
+

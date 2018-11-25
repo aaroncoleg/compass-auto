@@ -4,21 +4,22 @@
 
 <%= link_to '<button type="button">New Vehicle</button>'.html_safe, new_inventory_path %>
 
-<table>
+<table id="example">
   <thead>
     <tr>
       <th>Photo</th>
       <th>Vehicle Information</th>
       <th style="width: 120px"></th>
+
     </tr>
   </thead>
 
   <tbody>
     <% @inventories.each do |inventory| %>
-      <tr>
+      <tr data-link="<%= inventory_url(inventory) %>">
         <td>
           <% if inventory.photo.attached? %>
-            <%= link_to image_tag(inventory.photo), inventory %>
+            <%= image_tag inventory.photo %>
             <%end%>
         </td>
         <td>
@@ -28,13 +29,12 @@
           <li>Mileage: <%=inventory.mileage %></li>
         </ul>
         </td>
-        <td>
-          <%= link_to 'Destroy', inventory, method: :delete, data: { confirm: 'Are you sure?' } %>
-        </td>
+        <td><%= link_to 'Destroy', inventory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
+<br>
 
 
