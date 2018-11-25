@@ -17,7 +17,11 @@
   <tbody>
     <% @inventories.each do |inventory| %>
       <tr>
-        <td> </td>
+        <td>
+          <% if inventory.photo.attached? %>
+            <%= image_tag inventory.photo %>
+            <%end%>
+        </td>
         <td>
         <ul style="list-style: none;">
           <li><%= inventory.year.to_s + " " + inventory.make.name + " " + inventory.model.name%></li>

@@ -40,5 +40,7 @@
   <%= @inventory.sold %>
 </p>
 
+<%= image_tag @inventory.photo %>
+
 <%= link_to 'Edit', edit_inventory_path(@inventory) %> |
 <%= link_to 'Back', inventories_path %>
