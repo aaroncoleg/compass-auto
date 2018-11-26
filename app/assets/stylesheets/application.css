@@ -171,10 +171,14 @@ select:-webkit-autofill:focus {
     border-collapse: collapse;
     margin: auto;
     padding: 0;
-    width: 50%;
+    width: 700px;
     table-layout: fixed;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+.car-photo
+{
+    width: 280px;
 }
 
 table {

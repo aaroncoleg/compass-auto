@@ -1,9 +1,5 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Inventories</h1>
-
-<%= link_to '<button type="button">New Vehicle</button>'.html_safe, new_inventory_path %>
-
 <table id = "tb01">
   <thead style="width: 120px">
     <tr>
@@ -14,18 +10,18 @@
 
   <tbody>
     <% @inventories.each do |inventory| %>
-      <tr data-link="<%= inventory_url(inventory) %>">
+      <tr style="height:210px" data-link="<%= inventory_url(inventory) %>">
         <td>
           <% if inventory.photo.attached? %>
-            <%= image_tag inventory.photo , :size => "300x190" %>
+            <%= image_tag inventory.photo, :class => "car-photo"%>
             <%end%>
         </td>
         <td>
-        <ul style="list-style: none;">
-          <li><%= inventory.year.to_s + " " + inventory.make.name + " " + inventory.model.name%></li>
-          <li>Price: <%= number_to_currency(inventory.wholesale_price) %></li>
-          <li>Mileage: <%=inventory.mileage %></li>
-        </ul>
+          <ul style="list-style: none; text-align: left; line-height: 2">
+            <li><h4 style="padding: 0px; margin: 0px"><%= inventory.year.to_s + " " + inventory.make.name + " " + inventory.model.name%></h4></li>
+            <li style="margin-left: 10px"><%= '$' + number_with_precision(inventory.wholesale_price, :precision => 0, :delimiter => ',') %></li>
+            <li style="margin-left: 10px">Mileage: <%=number_with_delimiter(inventory.mileage, :delimiter => ',')%></li>
+          </ul>
         </td>
       </tr>
     <% end %>
@@ -33,5 +29,6 @@
 </table>
 
 <br>
+<%= link_to '<button type="button">New Vehicle</button>'.html_safe, new_inventory_path %>
 
 

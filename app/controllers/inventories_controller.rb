@@ -4,7 +4,7 @@ class InventoriesController < ApplicationController
   # GET /inventories
   # GET /inventories.json
   def index
-    @inventories = Inventory.all
+    @inventories = Inventory.joins(:make, :model).order("makes.name, models.name, year DESC")
   end
 
   # GET /inventories/1
