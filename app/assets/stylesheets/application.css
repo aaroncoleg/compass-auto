@@ -111,9 +111,9 @@ body {
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
-input:-webkit-autofill:focus
+input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:hover,
 textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
@@ -164,12 +164,18 @@ select:-webkit-autofill:focus {
     padding-left: 10px;
 }
 
-
-
-
-
-
-
+#tb01 {
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.25;
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: auto;
+    padding: 0;
+    width: 50%;
+    table-layout: fixed;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
 table {
     font-family: "Open Sans", sans-serif;
@@ -262,8 +268,6 @@ a:link,a:visited,a:active
 }
 
 
-
-
 .footer {
 
     background: black;
@@ -273,14 +277,17 @@ a:link,a:visited,a:active
 
 }
 
+
 .slideShow > div:not(.showImg) {
     display: none;
 }
+
 
 .showImg {
     display: block;
 
 }
+
 
 .button
 {
@@ -292,9 +299,11 @@ a:link,a:visited,a:active
     display: inline-block;
 }
 
+
 .button:hover {
     cursor: pointer;
 }
+
 
 [data-link] {
     cursor: pointer;

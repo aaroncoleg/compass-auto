@@ -47,4 +47,5 @@
 <%end%>
 
 <%= link_to 'Edit', edit_inventory_path(@inventory) %> |
+<%= link_to 'Destroy', @inventory, method: :delete, data: { confirm: 'Are you sure?' } %> |
 <%= link_to 'Back', inventories_path %>
