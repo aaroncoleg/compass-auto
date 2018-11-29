@@ -10,4 +10,10 @@ class Inventory < ApplicationRecord
             length: {maximum: 17},
             on: :create,
             allow_nil: false
+
+
+  def self.find_by_vehicle(vehicle_make_search, vehicle_model_search)
+  Customer.where(["name LIKE ?",vehicle_make_search]).where(["name LIKE ?",vehicle_model_search])
+  end
+
 end

@@ -1,50 +1,51 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Year:</strong>
-  <%= @inventory.year %>
-</p>
-
-<p>
-  <strong>Make:</strong>
-  <%= @inventory.make.name %>
-</p>
-
-<p>
-  <strong>Model:</strong>
-  <%= @inventory.model.name %>
-</p>
-
-<p>
-  <strong>Color:</strong>
-  <%= @inventory.color.name %>
-</p>
-
-<p>
-  <strong>Mileage:</strong>
-  <%= @inventory.mileage %>
-</p>
-
-<p>
-  <strong>Wholesale price:</strong>
-  <%= number_to_currency(@inventory.wholesale_price) %>
-</p>
-
-<p>
-  <strong>Vin:</strong>
-  <%= @inventory.vin %>
-</p>
-
-<p>
-  <strong>Sold:</strong>
-  <%= @inventory.sold %>
-</p>
+<div class="row">
+  <div class="column">
+    <h2 align="center"><%= @inventory.year %> <%= @inventory.make.name %> <%= @inventory.model.name %></h2>
+  </div>
+  <div class="column">
+    <h3 align="center"><%= number_to_currency(@inventory.wholesale_price) %></h3>
+  </div>
+</div>
 
 <% if @inventory.photo.attached? %>
   <p>
-  <%= image_tag @inventory.photo %>
+    <%= image_tag @inventory.photo, class: "show-car-photo"%>
   </p>
 <%end%>
+
+<div class="row">
+  <div class="column">
+
+    <h3>
+      Vehicle Information
+    </h3>
+
+    <p>
+    <strong>Mileage:</strong>
+    <%= @inventory.mileage %>
+    </p>
+
+    <p>
+      <strong>Vin:</strong>
+      <%= @inventory.vin %>
+    </p>
+
+  </div>
+
+  <div class="column">
+
+    <h3>
+      Available
+    </h3>
+    <p>
+      <strong>Sold:</strong>
+      <%= @inventory.sold %>
+    </p>
+  </div>
+</div>
+
 
 <%= link_to 'Edit', edit_inventory_path(@inventory) %> |
 <%= link_to 'Destroy', @inventory, method: :delete, data: { confirm: 'Are you sure?' } %> |

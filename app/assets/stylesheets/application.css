@@ -178,7 +178,12 @@ select:-webkit-autofill:focus {
 }
 .car-photo
 {
-    width: 280px;
+    width: 300px;
+}
+
+.show-car-photo
+{
+    width: 450px;
 }
 
 table {
@@ -311,5 +316,22 @@ a:link,a:visited,a:active
 
 [data-link] {
     cursor: pointer;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 

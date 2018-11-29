@@ -1,5 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+<%= form_tag inventories_path, :id => "search_form", :method => 'get' do %>
+  <%= text_field_tag :vehicle_make_search, params[:vehicle_make_search], :placeholder => "Model" %>
+  <%= text_field_tag :vehicle_model_search, params[:vehicle_model_search], :placeholder => "Make"  %>
+  <%= submit_tag "Search" %>
+<% end %>
+
 <table id = "tb01">
   <thead style="width: 120px">
     <tr>
@@ -18,9 +24,9 @@
         </td>
         <td>
           <ul style="list-style: none; text-align: left; line-height: 2">
-            <li><h4 style="padding: 0px; margin: 0px"><%= inventory.year.to_s + " " + inventory.make.name + " " + inventory.model.name%></h4></li>
-            <li style="margin-left: 10px"><%= '$' + number_with_precision(inventory.wholesale_price, :precision => 0, :delimiter => ',') %></li>
+            <li><h3 style="padding: 0px; margin: 0px"><%= inventory.year.to_s + " " + inventory.make.name + " " + inventory.model.name%></h3></li>
             <li style="margin-left: 10px">Mileage: <%=number_with_delimiter(inventory.mileage, :delimiter => ',')%></li>
+            <li style="margin-left: 10px"><%= '$' + number_with_precision(inventory.wholesale_price, :precision => 0, :delimiter => ',') %></li>
           </ul>
         </td>
       </tr>
