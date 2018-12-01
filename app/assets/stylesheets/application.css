@@ -79,7 +79,6 @@ body {
     color: #434343;
     line-height: 50px;
     text-decoration: none;
-    padding-top:1px;
     font-family: "Libre Franklin","Open Sans",Helvetica Neue,Helvetica,Arial,Roboto,sans-serif;
     font-weight: 800;
     letter-spacing: .1em;
@@ -111,9 +110,9 @@ body {
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
+input:-webkit-autofill:focus
 textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:hover
 textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
@@ -318,9 +317,7 @@ a:link,a:visited,a:active
     cursor: pointer;
 }
 
-* {
-    box-sizing: border-box;
-}
+
 
 .column {
     float: left;

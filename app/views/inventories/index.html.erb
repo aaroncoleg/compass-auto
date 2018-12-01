@@ -1,8 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <%= form_tag inventories_path, :id => "search_form", :method => 'get' do %>
-  <%= text_field_tag :vehicle_make_search, params[:vehicle_make_search], :placeholder => "Model" %>
-  <%= text_field_tag :vehicle_model_search, params[:vehicle_model_search], :placeholder => "Make"  %>
+  <%= select_tag :make_name, options_from_collection_for_select(Make.all.order(:name), :name, :name), {:prompt => 'Make', selected: '', disabled: ''} %>
+  <%= select_tag :model_name, options_from_collection_for_select(Model.all.order(:name), :name, :name), {:prompt => 'Model', selected: '', disabled: ''} %>
+  <%= select_tag :color_name, options_from_collection_for_select(Color.all.order(:name), :name, :name), {:prompt => 'Color', selected: '', disabled: ''} %>
+  <%= text_field_tag :vin_search, params[:vin_search], :placeholder => "VIN" %>
   <%= submit_tag "Search" %>
 <% end %>
 

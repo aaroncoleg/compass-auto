@@ -4,7 +4,20 @@ class InventoriesController < ApplicationController
   # GET /inventories
   # GET /inventories.json
   def index
-    @inventories = Inventory.joins(:make, :model).order("makes.name, models.name, year DESC")
+    @inventories = Inventory.all.joins(:make, :model).order("makes.name, models.name, year DESC")
+    unless params[:make_name].nil?
+      m_id = Make.where(:name => params[:make_name]).first.id
+      @inventories = @inventories.where(:make_id => m_id)
+    end
+    unless params[:color_name].nil?
+      c_id = Color.where(:name => params[:color_name]).first.id
+      @inventories = @inventories.where(:color_id => c_id)
+    end
+
+    unless params[:vin_search].nil?
+      @inventories = @inventories.where(["vin LIKE ?","%#{params[:vin_search]}%"])
+    end
+
   end
 
   # GET /inventories/1

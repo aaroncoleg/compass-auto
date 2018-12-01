@@ -13,12 +13,22 @@
 
   <div class="field">
     <%= form.label :customer_id %>
-    <%= form.collection_select  :customer_id, Customer.all.order(:last_name), :id, :full_name, :include_blank => true%>
+    <%= form.collection_select  :customer_id, Customer.all.order(:last_name), :id, :full_name, :include_blank => true, :required =>true%>
   </div>
 
   <div class="field">
     <%= form.label :inventory_id %>
+    <% if @inv.nil? %>
     <%= form.collection_select  :inventory_id, Inventory.where(:sold => false).order(:vin), :id, :vin, :include_blank => true%>
+      <% else %>
+      <% inv = Inventory.where(:vin => @inv).first %>
+      <% if inv.nil?%>
+        <%= form.collection_select  :inventory_id, Inventory.where(:sold => false).order(:vin), :id, :vin, :include_blank => true%>
+        <% else %>
+          <%= form.collection_select  :inventory_id, Inventory.where(:sold => false).order(:vin), :id, :vin, {:selected => inv} %>
+      <% end %>
+      <% end %>
+
   </div>
 
   <div class="actions">

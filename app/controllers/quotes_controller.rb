@@ -23,6 +23,7 @@ class QuotesController < ApplicationController
   # GET /quotes/new
   def new
     @quote = Quote.new
+    @inv = params[:inv]
   end
 
   # GET /quotes/1/edit
@@ -33,6 +34,10 @@ class QuotesController < ApplicationController
   # POST /quotes.json
   def create
     @quote = Quote.new(quote_params)
+    if(@quote.inventory_id.nil? || @quote.customer_id.nil?)
+       redirect_to new_quote_path
+      return
+    end
     inv = Inventory.find(@quote.inventory_id)
     p = Quote.calc_price(inv.id)
     @quote.price = "%.2f" % (p)
