@@ -25,5 +25,5 @@ Rails.application.routes.draw do
   get '/auth/:provider/callback', to: 'sessions#create'
   get '/fetch_finance' => 'quotes#show_finance', as: 'fetch_finance', :controller => 'quotes'
   patch 'users/:id', controller: 'users', action: :update
-  match '/download_quote' => 'quotes#download', via: :get
+  match '/quotes/:id' => 'quotes#download', :via => [:get], :as => 'download_quote'
 end
