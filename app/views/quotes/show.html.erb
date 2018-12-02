@@ -22,7 +22,7 @@
 </p>
 <br>
 <%= link_to 'Finance Breakdown', finance_show_path, {:style=>'margin-right: 1em;'} %>
-<%= link_to 'Export PDF', finance_show_path, {:style=>'margin-right: 1em;'} %>
+<%= link_to 'Export PDF', download_quote_path, {:style=>'margin-right: 1em;'} %>
 <% if @quote.sold %>
   <%= link_to 'Undo Sale', {:controller => :quotes,
                                :action => 'undo_sale', :id => @quote.id},  :method => :post, :style => 'margin-right: 1em;' %>
