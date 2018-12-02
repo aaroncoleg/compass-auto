@@ -126,6 +126,25 @@ class QuotesController < ApplicationController
     end
   end
 
+  /def quote_pdf
+    respond_to do |format|
+      format.html{
+        render :layout => false
+      }
+      format.pdf do
+        render :pdf => "quote"
+        render :layout => false
+      end
+    end
+  end
+
+  def download
+    html = render_to_string(:action => :resume, :layout => false)
+    pdf = WickedPdf.new.pdf_from_string(html)
+    send_data(pdf,
+              :filename    => "quote.pdf",
+              :disposition => 'attachment')
+  end/
 
   private
     # Use callbacks to share common setup or constraints between actions.

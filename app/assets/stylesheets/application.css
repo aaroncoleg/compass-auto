@@ -335,4 +335,10 @@ a:link,a:visited,a:active
     display: table;
     clear: both;
 }
-
+.field{
+    padding: .625em;
+    text-align: center;
+    font-size: .95em;
+    letter-spacing: .1em;
+    color: #035127;
+}
