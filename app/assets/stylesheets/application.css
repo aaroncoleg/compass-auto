@@ -10,7 +10,7 @@ body {
     text-align: center;
     font-family: roboto;
     overflow: auto;
-    background: #dee2e1;
+    background: #DADADA;
 }
 .nav {
 
@@ -196,6 +196,7 @@ table {
     table-layout: fixed;
     margin-top: 20px;
     margin-bottom: 20px;
+    background-color: #dee2e1;
 }
 
 table caption {
@@ -209,16 +210,19 @@ table tr {
     padding: .35em;
 }
 
-table th,
 table td {
     padding: .625em;
     text-align: center;
+    background-color: palegreen;
 }
 
 table th {
-    font-size: .85em;
+    padding: .625em;
+    text-align: center;
+    font-size: .95em;
     letter-spacing: .1em;
     text-transform: uppercase;
+    color: #035127;
 }
 a:link,a:visited,a:active
 {
