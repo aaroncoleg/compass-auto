@@ -25,6 +25,8 @@ gem 'will_paginate'
 gem "aws-sdk-s3", require: false
 gem 'chartkick'
 gem 'faker'
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
